@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resume>
+    <contact>
+        <name>
+            <full>David N Purdy</full>
+            <first>David</first>
+            <middle>Neil</middle>
+            <last>Purdy</last>
+        </name>
+        <address>
+            <street>1846 S. Loomis, Apt 204</street>
+            <city>Chicago</city>
+            <state>IL</state>
+            <zip>60608</zip>
+        </address>
+        <email>dnpurdy@gmail.com</email>
+        <phone>773-426-1268</phone>
+        <website>http://www.davidpurdy.net</website>
+    </contact>
+    <summary></summary>
+    <skills>
+        <skillSet type="Lanugages">
+            <skill>Java</skill>
+            <skill>Scala</skill>
+            <skill>Perl</skill>
+        </skillSet>
+        <skillSet type="Operating Systems">
+            <skill>Linux</skill>
+            <skill>Windows</skill>
+        </skillSet>
+    </skills>
+    <experience>
+        <highlights>Creative, results driven technology leader with 7+ years of experience in application design,
+            development, troubleshooting and testing. Problem-solver with a passion for innovative solutions,
+            rigorous systems thinking, and solving complex problems driven by market need. Skilled in grasping
+            the big picture, leveraging existing solutions to enable next-step endeavors into new spaces that are
+            sustainable, agile, and resource efficient. Focused on conceptualizing, developing, and implementing
+            solutions while partnering closely with business leaders and C-level executives to turn the next big ideas
+            into technological realities.
+        </highlights>
+    </experience>
+
+</resume>
