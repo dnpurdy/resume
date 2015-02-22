@@ -23,10 +23,53 @@
             <skill>Java</skill>
             <skill>Scala</skill>
             <skill>Perl</skill>
+            <skill>XSLT/FO</skill>
+            <skill>C</skill>
+            <skill>DHTML/XML</skill>
+            <skill>Shell Scripting</skill>
         </skillSet>
         <skillSet type="Operating Systems">
-            <skill>Linux</skill>
+            <skill>Linux (Ubuntu, Debian, Redhat, Centos 5/6)</skill>
             <skill>Windows</skill>
+        </skillSet>
+        <skillSet type="Frameworks">
+            <skill>Akka</skill>
+            <skill>Spring Framework (2/3/4)</skill>
+            <skill>PlayFramework</skill>
+            <skill>Wordpress</skill>
+        </skillSet>
+        <skillSet type="Networking">
+            <skill>TCP/IP</skill>
+            <skill>RPC</skill>
+            <skill>HTTP</skill>
+            <skill>DNS</skill>
+            <skill>DHCP</skill>
+            <skill>SSL</skill>
+            <skill>JSEE/Servlets (Weblogic/Tomcat)</skill>
+        </skillSet>
+        <skillSet type="Database">
+            <skill>Oracle DB</skill>
+            <skill>PL/SQL</skill>
+            <skill>MongoDB</skill>
+            <skill>Hadoop (Hive, HBase)</skill>
+            <skill>MySQL</skill>
+            <skill>Postgres</skill>
+        </skillSet>
+        <skillSet type="Version Control">
+            <skill>SVN</skill>
+            <skill>Git</skill>
+            <skill>CVS</skill>
+            <skill>BitBucket</skill>
+        </skillSet>
+        <skillSet type="Cloud Services">
+            <skill>Amazon AWS (S3/EC2/Route53)</skill>
+            <skill>Google App Engine</skill>
+            <skill>Heroku</skill>
+        </skillSet>
+        <skillSet type="Product Management">
+            <skill>Atlassian Products (JIRA, Confluence, Fisheye)</skill>
+            <skill>NetSuite</skill>
+            <skill>37Signals/Basecamp</skill>
         </skillSet>
     </skills>
     <experience>
@@ -38,6 +81,76 @@
             solutions while partnering closely with business leaders and C-level executives to turn the next big ideas
             into technological realities.
         </highlights>
+        <jobs>
+            <job>
+                <company name="Firm58" city="Chicago" state="Illinois"/>
+                <title>Application Developer/Integration Manager</title>
+                <dates>
+                    <start>Mar 2011</start>
+                    <end>Present</end>
+                </dates>
+                <accomplishments>
+                    <item>Designed, implemented, and deployed a enterprise wide conversion from licensed, proprietary
+                        container technology to free, open-source alternatives saving significant resources and improving
+                        operational efficiency and reliability</item>
+                    <item>Individually developed custom transactional loading software to streamline Firm58's critical, core
+                        ETL layer, replacing complicated and outdated infrastructure with a simplified, modern alternative</item>
+                    <item>Produced a high performance, massively parallelizable compliance and surveillance engine for
+                        identifying problematic trading patterns within customer data; took the product through its full life-cycle
+                        from ideation, through development, and into market delivery</item>
+                    <item>Spearheaded the adoption of industry standard practices and libraries within the code base long
+                        burdened with custom development, as well as the use of innovative and premier technologies
+                        including cloud infrastructures, improved database paradigms, and advanced development languages</item>
+                    <item>Specialized in benchmark tuning and application troubleshooting across the entire IT stack to
+                        extract increased performance and stability while correcting difficult cross-technology flaws</item>
+                    <item>Collaborated with operational staff to personally support data center operations including hardware
+                        replacement and maintenance, physical IT resource allocation/planning, and disaster recovery needs</item>
+                </accomplishments>
+            </job>
+            <job>
+                <company name="Firm58" city="Chicago" state="Illinois"/>
+                <title>Deployment/Integration Engineer</title>
+                <dates>
+                    <start>Jul 2009</start>
+                    <end>Mar 2011</end>
+                </dates>
+                <accomplishments>
+                    <item>Single resource for the creation and maintenance of no-touch, fully automated client data loading
+                        infrastructure and scripts for 30+ clients and 100 million daily contracted transactions</item>
+                    <item>Leveraged a variety of open source, proprietary, and custom technologies to extract, transform, and
+                        load data from nearly 75 data vendors into a single normalized data model</item>
+                    <item>Authored complex and business critical queries and reports to provide clear, straight-forward
+                        analytical insight of client trading data, costs, and trends, as well as in-house system performance
+                        metrics</item>
+                    <item>Used clear, top-down approaches to financial systems technology – from high level business
+                        modeling to low level database optimization – to produce scalable first-in-class technology solutions
+                        serving a wide variety of market customers from individual traders to entire exchanges</item>
+                    <item>On call and responsive process, systems, and server administration for high demand and high
+                        visibility clients with time and data sensitive requirements</item>
+                    <item>Worked directly with offshore development teams to distribute easily delegated responsibilities
+                        while maintaining managerial review of the quality of the work product, reducing costs and allowing
+                        for faster parallel integrations</item>
+                </accomplishments>
+            </job>
+            <job>
+                <company name="JWiley Photography" city="Chicago" state="Illinois"/>
+                <title>Strategic and Technical Consultant</title>
+                <dates>
+                    <start>May 2008</start>
+                    <end>Oct 2008</end>
+                </dates>
+                <accomplishments>
+                    <item>Developed the initial web presence and online advertising infrastructure for a fledging media
+                        oriented artist</item>
+                    <item>Main point person for strategic and business planning decisions for a growing small business</item>
+                    <item>Provided and configured free Linux servers and work-flow solutions to maximize limited resources</item>
+                    <item>Set up and maintained an Apache web presence, Postfix mail servers, fail-safe redundant RAID file
+                        and cloud backup solutions, as well as automated BASH scripts for seamless digital product
+                        management</item>
+                </accomplishments>
+
+            </job>
+        </jobs>
     </experience>
 
 </resume>

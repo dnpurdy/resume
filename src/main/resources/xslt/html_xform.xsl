@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:fo="http://www.w3.org/1999/XSL/Format"
-                xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                xmlns:fn="http://www.w3.org/2005/xpath-functions"
-                xmlns:xdt="http://www.w3.org/2005/xpath-datatypes"
                 exclude-result-prefixes="#all">
     <xsl:output indent="yes"/>
 
@@ -118,6 +114,27 @@
         </section>
 
         <hr/>
+    </xsl:template>
+
+    <xsl:template match="jobs">
+        <section>
+            <xsl:for-each select="job">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3><xsl:value-of select="title"/></h3>
+                        <h4><xsl:value-of select="company/@name"/></h4>
+                        <h5><xsl:value-of select="dates/start"/> - <xsl:value-of select="dates/end"/></h5>
+                    </div><!-- col-md-4 -->
+                    <div class="col-md-8">
+                        <ul>
+                            <xsl:for-each select="accomplishments/item">
+                                <li><xsl:value-of select="."/></li>
+                            </xsl:for-each>
+                        </ul>
+                    </div><!-- col-md-8 -->
+                </div><!-- row -->
+            </xsl:for-each>
+        </section>
     </xsl:template>
 
 </xsl:stylesheet>
