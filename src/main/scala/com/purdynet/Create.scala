@@ -14,9 +14,9 @@ import org.apache.xmlgraphics.util.MimeConstants
  */
 object Create extends App {
 
-  def createPdfViaFop() = {
+  def createPdfViaFop(outDir: String) = {
     val fopFactory = FopFactory.newInstance()
-    val out: OutputStream = new BufferedOutputStream(new FileOutputStream(new File("/tmp/myfile.pdf")))
+    val out: OutputStream = new BufferedOutputStream(new FileOutputStream(new File(outDir+"/myfile.pdf")))
 
     try {
       // Step 3: Construct fop with desired output format
@@ -46,9 +46,15 @@ object Create extends App {
   override def main(args: Array[String]): Unit = {
     val outDir = "/tmp/resume"
 
+    //createHtml(outDir)
+
+    createPdfViaFop(outDir)
+  }
+
+  def createHtml(outDir: String): Unit = {
     val fac = TransformerFactory.newInstance()
     val xform = fac.newTransformer(new StreamSource(getClass.getResourceAsStream("/xslt/html_xform.xsl")))
-    xform.transform(new StreamSource(getClass.getResourceAsStream("/xml/resume.xml")), new StreamResult(new File(outDir+"/resume.html")))
+    xform.transform(new StreamSource(getClass.getResourceAsStream("/xml/resume.xml")), new StreamResult(new File(outDir + "/resume.html")))
 
     // CSS
     copyResourceFile(outDir, "/css", "/style.css")
@@ -58,8 +64,6 @@ object Create extends App {
     copyResourceFile(outDir, "/images", "/hover-1.gif")
     copyResourceFile(outDir, "/images", "/separation.png")
     copyResourceFile(outDir, "/images", "/social.png")
-
-    createPdfViaFop()
   }
 
   def copyResourceFile(outputDir: String, parentPath: String, file: String) = {

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:Firm58="http://www.firm58.com"
                 xmlns:fo="http://www.w3.org/1999/XSL/Format"
                 xmlns:java="http://xml.apache.org/xslt/java"
-                exclude-result-prefixes="java">
+                xmlns:pn="http://www.purdynet.com"
+                exclude-result-prefixes="java pn Firm58">
 
     <!-- FORMATTING -->
     <xsl:variable name="dollarAmountFormatString" select="string('$###,##0.00;($###,##0.00)')" />
@@ -19,8 +21,34 @@
         <xsl:text>Times</xsl:text>
     </xsl:variable>
     <xsl:variable name="smallFontSize">
-        <xsl:text>6</xsl:text>
+        <xsl:text>10</xsl:text>
     </xsl:variable>
+
+    <xsl:attribute-set name="nameBanner">
+        <xsl:attribute name="font-family">
+            <xsl:value-of select="$mainFont" />
+        </xsl:attribute>
+        <xsl:attribute name="color">black</xsl:attribute>
+        <xsl:attribute name="font-weight">bold</xsl:attribute>
+        <xsl:attribute name="font-size"><xsl:value-of select="floor($smallFontSize*4)" />pt</xsl:attribute>
+    </xsl:attribute-set>
+    <xsl:attribute-set name="sectionHeader">
+        <xsl:attribute name="font-family">
+            <xsl:value-of select="$mainFont" />
+        </xsl:attribute>
+        <xsl:attribute name="color">black</xsl:attribute>
+        <xsl:attribute name="font-weight">normal</xsl:attribute>
+        <xsl:attribute name="font-size"><xsl:value-of select="floor($smallFontSize*1.5)" />pt</xsl:attribute>
+        <xsl:attribute name="margin-bottom"><xsl:value-of select="floor($smallFontSize*1.5)" />pt</xsl:attribute>
+    </xsl:attribute-set>
+    <xsl:attribute-set name="detailText">
+        <xsl:attribute name="font-family">
+            <xsl:value-of select="$mainFont" />
+        </xsl:attribute>
+        <xsl:attribute name="color">black</xsl:attribute>
+        <xsl:attribute name="font-weight">normal</xsl:attribute>
+        <xsl:attribute name="font-size"><xsl:value-of select="floor($smallFontSize*1.25)" />pt</xsl:attribute>
+    </xsl:attribute-set>
 
     <xsl:attribute-set name="largeTitle">
         <xsl:attribute name="font-family">
@@ -212,6 +240,11 @@
 
                 <!--  all page layout begins -->
                 <fo:flow flow-name="xsl-region-body">
+
+                    <xsl:call-template name="skills">
+                        <xsl:with-param name="skills" select="skills"/>
+                    </xsl:call-template>
+
                     <fo:block id="lastPage" />
                 </fo:flow>
             </fo:page-sequence>
@@ -222,18 +255,19 @@
         <!--  header section with logo and enddate -->
         <fo:static-content flow-name="xsl-region-before">
             <fo:block>
-                <fo:table border-bottom=".5pt solid black" table-layout="fixed" width="100%">
+                <fo:table table-layout="fixed" width="100%">
+                    <fo:table-column column-width="proportional-column-width(3)" />
                     <fo:table-column column-width="proportional-column-width(1)" />
-                    <fo:table-column column-width="proportional-column-width(2)" />
                     <fo:table-body>
-                        <fo:table-row height=".95in">
+                        <fo:table-row>
                             <fo:table-cell padding="{$littlePadding}">
-                                <fo:block>
+                                <fo:block xsl:use-attribute-sets="nameBanner">
+                                    <xsl:value-of select="contact/name/full"/>
                                 </fo:block>
                             </fo:table-cell>
                             <fo:table-cell padding="{$littlePadding}">
-                                <fo:block text-align="right">
-                                </fo:block>
+                                <fo:block text-align="right"><xsl:value-of select="contact/address/street"/></fo:block>
+                                <fo:block text-align="right"><xsl:value-of select="contact/address/city"/>, <xsl:value-of select="contact/address/state"/> <xsl:value-of select="contact/address/zip"/></fo:block>
                             </fo:table-cell>
                         </fo:table-row>
                     </fo:table-body>
@@ -253,12 +287,13 @@
                         <fo:table-row>
                             <fo:table-cell padding="6pt">
                                 <fo:block text-align="left" font-size="8pt">Period Ending
+
                                 </fo:block>
                             </fo:table-cell>
                             <fo:table-cell padding="6pt">
                                 <!--  page numbering -->
                                 <fo:block text-align="right" font-size="8pt">
-                                    Billing Statement - Page
+                                    Page
                                     <fo:page-number />
                                     of
                                     <fo:page-number-citation ref-id="lastPage" />
@@ -271,4 +306,41 @@
         </fo:static-content>
         <!-- end of footer section -->
     </xsl:template>
+
+    <xsl:template name="skills">
+        <xsl:param name="skills"/>
+        <fo:block>
+            <fo:block xsl:use-attribute-sets="sectionHeader"><xsl:text>TECHNICAL SKILLS</xsl:text></fo:block>
+            <fo:block>
+                <fo:table table-layout="fixed" width="100%">
+                    <fo:table-column column-width="proportional-column-width(2)" />
+                    <fo:table-column column-width="proportional-column-width(5)" />
+                    <fo:table-body>
+                        <xsl:for-each select="$skills/skillSet">
+                            <fo:table-row>
+                                <fo:table-cell>
+                                    <fo:block text-align="left" xsl:use-attribute-sets="detailText"><xsl:value-of select="./@type"/>:</fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell>
+                                    <fo:block xsl:use-attribute-sets="detailText">
+                                        <xsl:value-of select="pn:makeSkillString(.)"/>
+                                    </fo:block>
+                                </fo:table-cell>
+                            </fo:table-row>
+                        </xsl:for-each>
+                    </fo:table-body>
+                </fo:table>
+            </fo:block>
+        </fo:block>
+    </xsl:template>
+
+    <xsl:function name="pn:makeSkillString">
+        <xsl:param name="skillSet"/>
+        <xsl:variable name="output">
+        <xsl:for-each select="$skillSet/skill">
+            <xsl:value-of select="."/><xsl:text>, </xsl:text>
+        </xsl:for-each>
+        </xsl:variable>
+        <xsl:value-of select="substring($output,1,string-length($output)-2)"/>
+    </xsl:function>
 </xsl:stylesheet>
