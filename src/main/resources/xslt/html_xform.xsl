@@ -96,6 +96,12 @@
     </xsl:template>
 
     <xsl:template match="education">
+        <hr/>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-4">
+                <h2>Education</h2>
+            </div><!-- col-md-8 -->
+        </div>
 
         <xsl:apply-templates/>
 
@@ -107,6 +113,7 @@
         ::::: Highlights
         :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         -->
+        <hr/>
         <section>
             <div class="row">
                 <div class="col-md-8 col-md-offset-4">
@@ -118,13 +125,16 @@
                 </div><!-- col-md-8 -->
             </div><!-- row -->
         </section>
-
-        <hr/>
     </xsl:template>
 
     <xsl:template match="jobs">
+        <hr/>
         <section>
-            <xsl:for-each select="job">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-4">
+                    <h2>Experience</h2>
+                </div><!-- col-md-8 -->
+            </div>    <xsl:for-each select="job">
                 <div class="row">
                     <div class="col-md-4">
 

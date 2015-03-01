@@ -92,6 +92,13 @@
                             <end>2015-03-01</end>
                         </dates>
                     </position>
+                    <position>
+                        <title>Deployment/Integration Engineer</title>
+                        <dates>
+                            <start>2009-07-01</start>
+                            <end>2011-03-01</end>
+                        </dates>
+                    </position>
                 </positions>
                 <accomplishments>
                     <item>Designed, implemented, and deployed a enterprise wide conversion from licensed, proprietary
@@ -109,20 +116,6 @@
                         extract increased performance and stability while correcting difficult cross-technology flaws</item>
                     <item>Collaborated with operational staff to personally support data center operations including hardware
                         replacement and maintenance, physical IT resource allocation/planning, and disaster recovery needs</item>
-                </accomplishments>
-            </job>
-            <job>
-                <company name="Firm58" city="Chicago" state="Illinois"/>
-                <positions>
-                    <position>
-                        <title>Deployment/Integration Engineer</title>
-                        <dates>
-                            <start>2009-07-01</start>
-                            <end>2011-03-01</end>
-                        </dates>
-                    </position>
-                </positions>
-                <accomplishments>
                     <item>Single resource for the creation and maintenance of no-touch, fully automated client data loading
                         infrastructure and scripts for 30+ clients and 100 million daily contracted transactions</item>
                     <item>Leveraged a variety of open source, proprietary, and custom technologies to extract, transform, and
