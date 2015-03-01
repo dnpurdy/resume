@@ -46,9 +46,9 @@ object Create extends App {
   override def main(args: Array[String]): Unit = {
     val outDir = "/tmp/resume"
 
-    //createHtml(outDir)
+    createHtml(outDir)
 
-    createPdfViaFop(outDir)
+    //createPdfViaFop(outDir)
   }
 
   def createHtml(outDir: String): Unit = {

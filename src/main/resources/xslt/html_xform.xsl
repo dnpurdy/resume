@@ -95,6 +95,12 @@
 
     </xsl:template>
 
+    <xsl:template match="education">
+
+        <xsl:apply-templates/>
+
+    </xsl:template>
+
     <xsl:template match="highlights">
         <!--
         :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -121,9 +127,12 @@
             <xsl:for-each select="job">
                 <div class="row">
                     <div class="col-md-4">
-                        <h3><xsl:value-of select="title"/></h3>
-                        <h4><xsl:value-of select="company/@name"/></h4>
-                        <h5><xsl:value-of select="dates/start"/> - <xsl:value-of select="dates/end"/></h5>
+
+                        <h3><xsl:value-of select="company/@name"/></h3>
+                        <xsl:for-each select="positions/position">
+                            <h4><xsl:value-of select="title"/></h4>
+                            <h5><xsl:value-of select="format-date(dates/start, '[MNn,3-3] [Y0001]')"/> - <xsl:value-of select="format-date(dates/end, '[MNn,3-3] [Y0001]')"/></h5>
+                        </xsl:for-each>
                     </div><!-- col-md-4 -->
                     <div class="col-md-8">
                         <ul>
@@ -134,6 +143,22 @@
                     </div><!-- col-md-8 -->
                 </div><!-- row -->
             </xsl:for-each>
+        </section>
+    </xsl:template>
+
+    <xsl:template match="degree">
+        <section>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3><xsl:value-of select="@title"/></h3>
+                    <h4><xsl:value-of select="school/@name"/></h4>
+                    <h5><xsl:value-of select="format-date(@grantDate, '[MNn,3-3] [Y0001]')"/></h5>
+                </div><!-- col-md-4 -->
+                <div class="col-md-8">
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. </p>
+                </div><!-- col-md-8 -->
+            </div>
+
         </section>
     </xsl:template>
 
