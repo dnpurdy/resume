@@ -5,12 +5,12 @@
     <xsl:output indent="yes"/>
 
     <xsl:template match="/">
-        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html></xsl:text>
+        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
         <html lang="en">
             <head>
                 <meta charset="UTF-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <title>Resume Template</title>
+                <title><xsl:value-of select="resume/contact/name/full"/></title>
 
                 <!-- CSS -->
                 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
@@ -46,9 +46,11 @@
                     </div><!-- col-md-6 -->
                     <div class="col-md-4">
                         <address>
+                            <!--
                             <xsl:value-of select="address/street"/><br/>
                             <xsl:value-of select="address/city"/>,<xsl:value-of select="address/state"/> <xsl:value-of select="address/zip"/><br/>
                             <abbr title="Phone">P:</abbr> <xsl:value-of select="phone"/> <br/>
+                            -->
                             <abbr title="Email">E:</abbr>
                             <a>
                                 <xsl:attribute name="href" select="concat('mailto:',email)"/>
@@ -141,7 +143,14 @@
                         <h3><xsl:value-of select="company/@name"/></h3>
                         <xsl:for-each select="positions/position">
                             <h4><xsl:value-of select="title"/></h4>
-                            <h5><xsl:value-of select="format-date(dates/start, '[MNn,3-3] [Y0001]')"/> - <xsl:value-of select="format-date(dates/end, '[MNn,3-3] [Y0001]')"/></h5>
+                            <h5><xsl:value-of select="format-date(dates/start, '[MNn,3-3] [Y0001]')"/> -
+                                <xsl:choose>
+                                    <xsl:when test="normalize-space(dates/end) = 'Present' "><xsl:text>Present</xsl:text></xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:value-of select="format-date(dates/end, '[MNn,3-3] [Y0001]')"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                                </h5>
                         </xsl:for-each>
                     </div><!-- col-md-4 -->
                     <div class="col-md-8">

@@ -13,7 +13,7 @@
             <state>IL</state>
             <zip>60608</zip>
         </address>
-        <email>dnpurdy@gmail.com</email>
+        <email>resume@davidpurdy.net</email>
         <phone>773-426-1268</phone>
         <website>http://www.davidpurdy.net</website>
     </contact>
@@ -82,6 +82,19 @@
             into technological realities.
         </highlights>
         <jobs>
+	 <job>
+	  <company name="SwiftIQ" city="Chicago" state="Illinois"/>
+	  <positions>
+		<position>
+			<title>Lead Integration Engineer</title>
+			<dates><start>2015-03-01</start><end>Present</end></dates>
+		</position>
+		<accomplishments>
+			<item>Developed streamlined BigData/Massive Parallel pipelines for ingesting XXX billion POS retail transactions annually</item>
+			<item>Designed and implemented a leading industry Out Of Stock inventory solution driven solely from POS transactions</item>
+		</accomplishments>
+         </positions>       
+ 	 </job>
             <job>
                 <company name="Firm58" city="Chicago" state="Illinois"/>
                 <positions>
