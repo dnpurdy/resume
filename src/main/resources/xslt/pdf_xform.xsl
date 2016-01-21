@@ -280,28 +280,6 @@
         <!--  footer section with page numbering and bottom border -->
         <fo:static-content flow-name="xsl-region-after">
             <fo:block>
-                <fo:table border-top=".5pt solid black" table-layout="fixed" width="100%">
-                    <fo:table-column column-width="proportional-column-width(1)" />
-                    <fo:table-column column-width="proportional-column-width(3)" />
-                    <fo:table-body>
-                        <fo:table-row>
-                            <fo:table-cell padding="6pt">
-                                <fo:block text-align="left" font-size="8pt">Period Ending
-
-                                </fo:block>
-                            </fo:table-cell>
-                            <fo:table-cell padding="6pt">
-                                <!--  page numbering -->
-                                <fo:block text-align="right" font-size="8pt">
-                                    Page
-                                    <fo:page-number />
-                                    of
-                                    <fo:page-number-citation ref-id="lastPage" />
-                                </fo:block>
-                            </fo:table-cell>
-                        </fo:table-row>
-                    </fo:table-body>
-                </fo:table>
             </fo:block>
         </fo:static-content>
         <!-- end of footer section -->

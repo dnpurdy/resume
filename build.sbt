@@ -12,6 +12,10 @@ libraryDependencies += "commons-io" % "commons-io" % "2.4"
 
 //libraryDependencies += "org.apache.avalon.framework" % "avalon-framework-impl" % "4.2.0" from "http://repo1.maven.org/maven2/avalon-framework/avalon-framework-impl/4.2.0/avalon-framework-impl-4.2.0.jar"
 
+libraryDependencies += "org.apache.xmlgraphics" % "batik-bridge" % "1.8"
+
+libraryDependencies += "org.apache.xmlgraphics" % "xmlgraphics-commons" % "2.1"
+
 libraryDependencies += "org.apache.xmlgraphics" % "fop" % "2.0"
 
 assemblyMergeStrategy in assembly := {

@@ -6,7 +6,7 @@ import javax.xml.transform.sax.SAXResult
 import javax.xml.transform.stream.{StreamResult, StreamSource}
 
 import org.apache.commons.io.{FileUtils, IOUtils}
-import org.apache.fop.apps.FopFactory
+import org.apache.fop.apps.{Fop, FopFactoryBuilder, FopConfParser, FopFactory}
 import org.apache.xmlgraphics.util.MimeConstants
 
 /**
@@ -14,19 +14,17 @@ import org.apache.xmlgraphics.util.MimeConstants
  */
 object Create extends App {
 
-  /*def createPdfViaFop(outDir: String) = {
-    val xconf = new File("fop.xconf")
+    def createPdfViaFop(outDir: String) = {
+    val xconf = new File(this.getClass.getClassLoader.getResource("conf/fop.xconf").getPath)
     val parser = new FopConfParser(xconf) //parsing configuration
-    FopFactoryBuilder builder = parser.getFopFactoryBuilder(); //building the factory with the user options
-    FOPFactory fopFactory = builder.build();
-    Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, foUserAgent, out);
+    def builder = parser.getFopFactoryBuilder(); //building the factory with the user options
+    def fopFactory = builder.build()
+      val out: OutputStream = new BufferedOutputStream(new FileOutputStream(new File(outDir+"/myfile.txt")))
 
-    val fopFactory = FopFactory.newInstance()
-    val out: OutputStream = new BufferedOutputStream(new FileOutputStream(new File(outDir+"/myfile.pdf")))
 
     try {
       // Step 3: Construct fop with desired output format
-      val fop = fopFactory.newFop(MimeConstants.MIME_PDF, out)
+      val fop = fopFactory.newFop(MimeConstants.MIME_PLAIN_TEXT, out)
 
       // Step 4: Setup JAXP using identity transformer
       val factory = TransformerFactory.newInstance()
@@ -38,7 +36,7 @@ object Create extends App {
       val src = new StreamSource(getClass.getResourceAsStream("/xml/resume.xml"))
 
       // Resulting SAX events (the generated FO) must be piped through to FOP
-      val res = new SAXResult(fop.getDefaultHandler())
+      val res = new SAXResult(fop.getDefaultHandler)
 
       // Step 6: Start XSLT transformation and FOP processing
       transformer.transform(src, res)
@@ -47,14 +45,14 @@ object Create extends App {
       //Clean-up
       out.close()
     }
-  }*/
+  }
 
   override def main(args: Array[String]): Unit = {
     val outDir = "/tmp/resume"
 
     createHtml(outDir)
 
-    //createPdfViaFop(outDir)
+    createPdfViaFop(outDir)
   }
 
   def createHtml(outDir: String): Unit = {
