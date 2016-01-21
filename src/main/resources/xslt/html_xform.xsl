@@ -14,7 +14,7 @@
 
                 <!-- CSS -->
                 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-                <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"/>
+                <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" media="screen"/>
                 <link href="css/style.css" rel="stylesheet"/>
 
             </head>
@@ -46,11 +46,6 @@
                     </div><!-- col-md-6 -->
                     <div class="col-md-4">
                         <address>
-                            <!--
-                            <xsl:value-of select="address/street"/><br/>
-                            <xsl:value-of select="address/city"/>,<xsl:value-of select="address/state"/> <xsl:value-of select="address/zip"/><br/>
-                            <abbr title="Phone">P:</abbr> <xsl:value-of select="phone"/> <br/>
-                            -->
                             <abbr title="Email">E:</abbr>
                             <a>
                                 <xsl:attribute name="href" select="concat('mailto:',email)"/>
@@ -60,6 +55,17 @@
                             <a>
                                 <xsl:attribute name="href" select="website"/>
                                 <xsl:value-of select="website"/>
+                            </a><br/>
+                            <abbr title="Files">F:</abbr>
+                            <a>
+                                <xsl:attribute name="href" select="string('#')"/>
+                                <xsl:attribute name="class" select="string('btn btn-default btn-sm')"/>
+                                PDF
+                            </a>
+                            <a>
+                                <xsl:attribute name="href" select="string('#')"/>
+                                <xsl:attribute name="class" select="string('btn btn-default btn-sm')"/>
+                                TXT
                             </a><br/>
                         </address>
                     </div><!-- col-md-4 -->
@@ -86,7 +92,7 @@
 
             <div class="col-md-4"><xsl:value-of select="@type"/>:</div>
             <div class="col-md-8">
-                <xsl:for-each select="skill"><xsl:value-of select="."/>,</xsl:for-each>
+                <xsl:value-of select="skill" separator=", "/>
             </div>
 
     </xsl:template>
@@ -168,16 +174,18 @@
     <xsl:template match="degree">
         <section>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-8 col-md-offset-2">
                     <h3><xsl:value-of select="@title"/></h3>
                     <h4><xsl:value-of select="school/@name"/></h4>
                     <h5><xsl:value-of select="format-date(@grantDate, '[MNn,3-3] [Y0001]')"/></h5>
+                    <ul>
+                        <li><xsl:value-of select="comments"/></li>
+                    </ul>
                 </div><!-- col-md-4 -->
-                <div class="col-md-8">
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. </p>
-                </div><!-- col-md-8 -->
-            </div>
+                <!--<div class="col-md-8">
 
+                </div>--><!-- col-md-8 -->
+            </div>
         </section>
     </xsl:template>
 

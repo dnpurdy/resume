@@ -14,7 +14,13 @@ import org.apache.xmlgraphics.util.MimeConstants
  */
 object Create extends App {
 
-  def createPdfViaFop(outDir: String) = {
+  /*def createPdfViaFop(outDir: String) = {
+    val xconf = new File("fop.xconf")
+    val parser = new FopConfParser(xconf) //parsing configuration
+    FopFactoryBuilder builder = parser.getFopFactoryBuilder(); //building the factory with the user options
+    FOPFactory fopFactory = builder.build();
+    Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, foUserAgent, out);
+
     val fopFactory = FopFactory.newInstance()
     val out: OutputStream = new BufferedOutputStream(new FileOutputStream(new File(outDir+"/myfile.pdf")))
 
@@ -41,7 +47,7 @@ object Create extends App {
       //Clean-up
       out.close()
     }
-  }
+  }*/
 
   override def main(args: Array[String]): Unit = {
     val outDir = "/tmp/resume"

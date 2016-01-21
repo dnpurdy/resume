@@ -62,8 +62,8 @@
             <skill>BitBucket</skill>
         </skillSet>
         <skillSet type="Cloud Services">
+            <skill>Google Cloud (Dataflow,BigQuery,App Engine)</skill>
             <skill>Amazon AWS (S3/EC2/Route53)</skill>
-            <skill>Google App Engine</skill>
             <skill>Heroku</skill>
         </skillSet>
         <skillSet type="Product Management">
@@ -73,7 +73,7 @@
         </skillSet>
     </skills>
     <experience>
-        <highlights>Creative, results driven technology leader with 7+ years of experience in application design,
+        <highlights>Creative, results driven technology leader with 8+ years of experience in application design,
             development, troubleshooting and testing. Problem-solver with a passion for innovative solutions,
             rigorous systems thinking, and solving complex problems driven by market need. Skilled in grasping
             the big picture, leveraging existing solutions to enable next-step endeavors into new spaces that are
@@ -82,19 +82,27 @@
             into technological realities.
         </highlights>
         <jobs>
-	 <job>
-	  <company name="SwiftIQ" city="Chicago" state="Illinois"/>
-	  <positions>
-		<position>
-			<title>Lead Integration Engineer</title>
-			<dates><start>2015-03-01</start><end>Present</end></dates>
-		</position>
-		<accomplishments>
-			<item>Developed streamlined BigData/Massive Parallel pipelines for ingesting XXX billion POS retail transactions annually</item>
-			<item>Designed and implemented a leading industry Out Of Stock inventory solution driven solely from POS transactions</item>
-		</accomplishments>
-         </positions>       
- 	 </job>
+            <job>
+                <company name="SwiftIQ" city="Chicago" state="Illinois"/>
+                <positions>
+                    <position>
+                        <title>Lead Engineer</title>
+                        <dates>
+                            <start>2015-03-01</start>
+                            <end>Present</end>
+                        </dates>
+                    </position>
+                </positions>
+                <accomplishments>
+                    <item>Developed streamlined BigData/Massive Parallel pipelines for ingesting XXX billion POS retail
+                        transactions annually, automating full receipt level data for top retails, brands and suppliers</item>
+                    <item>Conceived, designed, developed, and iterated multiple core platform applications, helping
+                        turn a pilot-only startup into a seven figure recurrent revenue business</item>
+                    <item>Designed and implemented a leading industry Out Of Stock inventory solution driven solely from POS transactions</item>
+                    <item>Lead principal development for propriety IP allowing for one-to-one mobile advertising to targeted mobile devices
+                        from physical offline POS transactions alone, patent pending</item>
+                </accomplishments>
+            </job>
             <job>
                 <company name="Firm58" city="Chicago" state="Illinois"/>
                 <positions>
