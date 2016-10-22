@@ -1,48 +1,69 @@
 package com.purdynet
 
-import java.io.{BufferedOutputStream, File, FileOutputStream, OutputStream}
-import javax.xml.transform.TransformerFactory
+import java.io._
+import javax.xml.transform._
 import javax.xml.transform.sax.SAXResult
 import javax.xml.transform.stream.{StreamResult, StreamSource}
 
 import org.apache.commons.io.{FileUtils, IOUtils}
-import org.apache.fop.apps.{Fop, FopFactoryBuilder, FopConfParser, FopFactory}
+import org.apache.fop.apps.{Fop, FopConfParser, FopFactory, FopFactoryBuilder}
 import org.apache.xmlgraphics.util.MimeConstants
 
 /**
- * Created by dnpurdy on 2/18/15.
- */
+  * Created by dnpurdy on 2/18/15.
+  */
 object Create extends App {
 
-    def createPdfViaFop(outDir: String) = {
-    val xconf = new File(this.getClass.getClassLoader.getResource("conf/fop.xconf").getPath)
+  def createPdfViaFop(outDir: String, t: String, ext: String) = {
+    /*val xconf = new File(this.getClass.getClassLoader.getResource("conf/fop.xconf").getPath)
     val parser = new FopConfParser(xconf) //parsing configuration
-    def builder = parser.getFopFactoryBuilder(); //building the factory with the user options
-    def fopFactory = builder.build()
-      val out: OutputStream = new BufferedOutputStream(new FileOutputStream(new File(outDir+"/myfile.txt")))
+    def builder = parser.getFopFactoryBuilder(); //building the factory with the user options*/
+    def fopFactory = FopFactory.newInstance(new File(".").toURI())
+    val foUserAgent = fopFactory.newFOUserAgent()
+    val out: OutputStream = new BufferedOutputStream(new FileOutputStream(new File(outDir+"/resume"+ext)))
 
 
     try {
-      // Step 3: Construct fop with desired output format
-      val fop = fopFactory.newFop(MimeConstants.MIME_PLAIN_TEXT, out)
-
+      val fop = fopFactory.newFop(t, foUserAgent, out)
       // Step 4: Setup JAXP using identity transformer
       val factory = TransformerFactory.newInstance()
       val xslt = new StreamSource(getClass.getResourceAsStream("/xslt/pdf_xform.xsl"))
       val transformer = factory.newTransformer(xslt)
 
-      // Step 5: Setup input and output for XSLT transformation
-      // Setup input stream
-      val src = new StreamSource(getClass.getResourceAsStream("/xml/resume.xml"))
+      transformer.setParameter("versionParam", "2.0")
 
+      val src = new StreamSource(getClass.getResourceAsStream("/xml/resume.xml"))
       // Resulting SAX events (the generated FO) must be piped through to FOP
       val res = new SAXResult(fop.getDefaultHandler)
 
-      // Step 6: Start XSLT transformation and FOP processing
       transformer.transform(src, res)
 
     } finally {
       //Clean-up
+      out.close()
+    }
+  }
+
+  @throws(classOf[IOException])
+  @throws(classOf[TransformerException])
+  def convertXML2FO(outDir: String, t: String, ext: String) {
+    val out: OutputStream = new BufferedOutputStream(new FileOutputStream(new File(outDir+"/resume"+ext)))
+
+    try {
+      //Setup XSLT
+      val factory: TransformerFactory = TransformerFactory.newInstance()
+      val xslt = new StreamSource(getClass.getResourceAsStream("/xslt/pdf_xform.xsl"))
+      val transformer: Transformer = factory.newTransformer(xslt)
+
+      //Setup input for XSLT transformation
+      val src = new StreamSource(getClass.getResourceAsStream("/xml/resume.xml"))
+
+      //Resulting SAX events (the generated FO) must be piped through to FOP
+      val res: Result = new StreamResult(out)
+
+      //Start XSLT transformation and FOP processing
+      transformer.transform(src, res);
+    } finally {
       out.close()
     }
   }
@@ -52,7 +73,9 @@ object Create extends App {
 
     createHtml(outDir)
 
-    createPdfViaFop(outDir)
+    createPdfViaFop(outDir, MimeConstants.MIME_PDF, ".pdf")
+    convertXML2FO(outDir, MimeConstants.MIME_XSL_FO, ".fo")
+    createPdfViaFop(outDir, MimeConstants.MIME_PLAIN_TEXT, ".txt")
   }
 
   def createHtml(outDir: String): Unit = {

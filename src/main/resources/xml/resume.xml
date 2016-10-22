@@ -8,16 +8,22 @@
             <last>Purdy</last>
         </name>
         <address>
-            <street>1846 S. Loomis, Apt 204</street>
+            <street>823 N Maplewood Ave Apt 1</street>
             <city>Chicago</city>
             <state>IL</state>
-            <zip>60608</zip>
+            <zip>60622</zip>
         </address>
         <email>resume@davidpurdy.net</email>
         <phone>773-426-1268</phone>
         <website>http://www.davidpurdy.net</website>
     </contact>
-    <summary></summary>
+    <highlights>Creative, results driven technology leader with 8+ years of experience in application design,
+        development, troubleshooting and testing. Problem-solver with a passion for innovative solutions,
+        rigorous systems thinking, and solving complex problems driven by market need. Skilled in grasping
+        the big picture, leveraging existing solutions to enable next-step endeavors into new spaces that
+        are sustainable, agile, and resource efficient. Focused on conceptualizing, developing, and
+        implementing solutions while partnering closely with business leaders and C-level executives
+        to turn the next big ideas into technological realities.</highlights>
     <skills>
         <skillSet type="Lanugages">
             <skill>Java</skill>
@@ -63,7 +69,7 @@
         </skillSet>
         <skillSet type="Cloud Services">
             <skill>Google Cloud (Dataflow,BigQuery,App Engine)</skill>
-            <skill>Amazon AWS (S3/EC2/Route53)</skill>
+            <skill>Amazon AWS (S3/EC2)</skill>
             <skill>Heroku</skill>
         </skillSet>
         <skillSet type="Product Management">
@@ -73,20 +79,12 @@
         </skillSet>
     </skills>
     <experience>
-        <highlights>Creative, results driven technology leader with 8+ years of experience in application design,
-            development, troubleshooting and testing. Problem-solver with a passion for innovative solutions,
-            rigorous systems thinking, and solving complex problems driven by market need. Skilled in grasping
-            the big picture, leveraging existing solutions to enable next-step endeavors into new spaces that are
-            sustainable, agile, and resource efficient. Focused on conceptualizing, developing, and implementing
-            solutions while partnering closely with business leaders and C-level executives to turn the next big ideas
-            into technological realities.
-        </highlights>
         <jobs>
             <job>
                 <company name="SwiftIQ" city="Chicago" state="Illinois"/>
                 <positions>
                     <position>
-                        <title>Lead Engineer</title>
+                        <title>Lead Platform Engineer</title>
                         <dates>
                             <start>2015-03-01</start>
                             <end>Present</end>
@@ -94,7 +92,7 @@
                     </position>
                 </positions>
                 <accomplishments>
-                    <item>Developed streamlined BigData/Massive Parallel pipelines for ingesting XXX billion POS retail
+                    <item>Developed streamlined BigData/Massive Parallel pipelines for ingesting $50 billion of POS retail
                         transactions annually, automating full receipt level data for top retails, brands and suppliers</item>
                     <item>Conceived, designed, developed, and iterated multiple core platform applications, helping
                         turn a pilot-only startup into a seven figure recurrent revenue business</item>
