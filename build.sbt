@@ -16,7 +16,7 @@ libraryDependencies += "org.apache.xmlgraphics" % "batik-bridge" % "1.8"
 
 libraryDependencies += "org.apache.xmlgraphics" % "xmlgraphics-commons" % "2.1"
 
-libraryDependencies += "org.apache.xmlgraphics" % "fop" % "2.0"
+libraryDependencies += "org.apache.xmlgraphics" % "fop" % "2.1"
 
 assemblyMergeStrategy in assembly := {
   case PathList("org","w3c","dom", xs @ _*) => MergeStrategy.first
