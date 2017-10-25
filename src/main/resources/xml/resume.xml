@@ -16,6 +16,7 @@
         <email>resume@davidpurdy.net</email>
         <phone>773-426-1268</phone>
         <website>http://www.davidpurdy.net</website>
+        <github>https://github.com/dnpurdy</github>
     </contact>
     <highlights>Creative, results driven technology leader with 8+ years of experience in application design,
         development, troubleshooting and testing. Problem-solver with a passion for innovative solutions,
@@ -54,12 +55,12 @@
             <skill>JSEE/Servlets (Weblogic/Tomcat)</skill>
         </skillSet>
         <skillSet type="Database">
+            <skill>BigQuery</skill>
             <skill>Oracle DB</skill>
             <skill>PL/SQL</skill>
             <skill>MongoDB</skill>
             <skill>Hadoop (Hive, HBase)</skill>
             <skill>MySQL</skill>
-            <skill>Postgres</skill>
         </skillSet>
         <skillSet type="Version Control">
             <skill>SVN</skill>
@@ -220,4 +221,20 @@
             <comments>Dean's List (2002-5)</comments>
         </degree>
     </education>
+    <patents>
+        <patent>
+            <title>SYSTEM AND METHOD FOR DETERMINING PURCHASE RECORDS OF MOBILE DEVICES TO PROVIDE EFFECTIVE MOBILE ADVERTISING</title>
+            <applicationNumber>14/990964</applicationNumber>
+            <efsId>24567828</efsId>
+            <firstNamedInventor>Spencer J Lee</firstNamedInventor>
+            <attorneyDocketNumber>15356-0004</attorneyDocketNumber>
+        </patent>
+        <patent>
+            <title>SYSTEM AND METHOD FOR DETERMINING AFFINITY, RELATIVE VALUE, TRIP MISSIONS AND DRIVERS OF RELATIVE ITEMS</title>
+            <applicationNumber>62/372748</applicationNumber>
+            <efsId></efsId>
+            <firstNamedInventor>Massimo Ilario</firstNamedInventor>
+            <attorneyDocketNumber>15356-0004</attorneyDocketNumber>
+        </patent>
+    </patents>
 </resume>
