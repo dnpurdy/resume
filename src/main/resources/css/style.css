@@ -64,7 +64,7 @@ li{ list-style: square}
 .jumbotron h1{ margin-top:0px; line-height:1; font-size:50px }
 .jumbotron h2{ font-size:24.5px}
 .jumbotron address{ line-height:30px; margin-top:2px}
-.jumbotron abbr[title], .jumbotron abbr[data-original-title]{ width:20px; display:inline-block; text-align:center; background: url(../images/bg-perpendicular.png) repeat; border-bottom:none; line-height:24px}
+.jumbotron abbr[title], .jumbotron abbr[data-original-title]{ width:25px; display:inline-block; text-align:center; background: url(../images/bg-perpendicular.png) repeat; border-bottom:none; line-height:24px}
 .jumbotron .avatar{  background: url(../images/bg-perpendicular.png) repeat #fff; padding:10px;}
 .social { margin:0px; background-color:#ccc; position:absolute; bottom:0px;}
 .social li{ float:left; display:block; border-left:dashed 1px #b3b3b3;  background-color:#d6d6d4;}

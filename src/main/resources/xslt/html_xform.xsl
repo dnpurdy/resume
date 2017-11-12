@@ -13,8 +13,9 @@
                 <title><xsl:value-of select="resume/contact/name/full"/></title>
 
                 <!-- CSS -->
-                <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-                <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" media="screen"/>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+                <!--<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css"/>-->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
                 <link href="css/style.css" rel="stylesheet"/>
 
             </head>
@@ -46,26 +47,33 @@
                     </div><!-- col-md-6 -->
                     <div class="col-md-4">
                         <address>
-                            <abbr title="Email">E:</abbr>
+                            <abbr title="Email"><i class="fa fa-envelope-o" aria-hidden="true">&#160;</i>:</abbr>
                             <a>
                                 <xsl:attribute name="href" select="concat('mailto:',email)"/>
                                 <xsl:value-of select="email"/>
                             </a><br/>
-                            <abbr title="Website">W:</abbr>
+                            <abbr title="Website"><i class="fa fa-external-link" aria-hidden="true">&#160;</i>:</abbr>
                             <a>
                                 <xsl:attribute name="href" select="website"/>
                                 <xsl:value-of select="website"/>
                             </a><br/>
-                            <abbr title="Files">F:</abbr>
+                            <abbr title="GitHub"><i class="fa fa-github" aria-hidden="true">&#160;</i>:</abbr>
                             <a>
-                                <xsl:attribute name="href" select="string('#')"/>
+                                <xsl:attribute name="href" select="github"/>
+                                <xsl:value-of select="github"/>
+                            </a><br/>
+                            <abbr title="Files"></abbr>
+                            <a>
+                                <xsl:attribute name="href" select="string('resume.pdf')"/>
                                 <xsl:attribute name="class" select="string('btn btn-default btn-sm')"/>
                                 PDF
+                                <i class="fa fa-file-pdf-o" aria-hidden="true">&#160;</i>
                             </a>
                             <a>
-                                <xsl:attribute name="href" select="string('#')"/>
+                                <xsl:attribute name="href" select="string('resume.rtf')"/>
                                 <xsl:attribute name="class" select="string('btn btn-default btn-sm')"/>
-                                TXT
+                                RTF
+                                <i class="fa fa-file-text-o" aria-hidden="true">&#160;</i>
                             </a><br/>
                         </address>
                     </div><!-- col-md-4 -->

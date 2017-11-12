@@ -88,8 +88,15 @@
                         <title>Lead Platform Engineer</title>
                         <dates>
                             <start>2015-03-01</start>
-                            <end>Present</end>
+                            <end>2016-12-31</end>
                         </dates>
+                    </position>
+                    <position>
+                        <title>Senior Engineering Mananger</title>
+                            <dates>
+                                <start>2017-01-01</start>
+                                <end>2017-08-18</end>
+                            </dates>
                     </position>
                 </positions>
                 <accomplishments>
@@ -205,8 +212,8 @@
                         staff to develop, implement, and improve technology solutions across systems. This utilized diverse
                         technologies such as PERL, Python, C, and SQL languages in both development and production
                         environments</item>
-                    <item>Coordinated the study, modeling, and tracking of company-wide capacity metrics to ensure
-                        necessary staffing levels despite changing market conditions</item>
+                    <item>Coordinated the study, modeling, and tracking of company-wide capacity metrics to ensure necessary staffing levels
+                        despite changing market conditions</item>
                 </accomplishments>
             </job>
         </jobs>
@@ -223,14 +230,14 @@
     </education>
     <patents>
         <patent>
-            <title>SYSTEM AND METHOD FOR DETERMINING PURCHASE RECORDS OF MOBILE DEVICES TO PROVIDE EFFECTIVE MOBILE ADVERTISING</title>
+            <title>System and method for determining purchase records of mobile devices to provide effective mobile advertising</title>
             <applicationNumber>14/990964</applicationNumber>
             <efsId>24567828</efsId>
             <firstNamedInventor>Spencer J Lee</firstNamedInventor>
             <attorneyDocketNumber>15356-0004</attorneyDocketNumber>
         </patent>
         <patent>
-            <title>SYSTEM AND METHOD FOR DETERMINING AFFINITY, RELATIVE VALUE, TRIP MISSIONS AND DRIVERS OF RELATIVE ITEMS</title>
+            <title>System and method for determining affinity, relative value, trip missions and drivers of relative items</title>
             <applicationNumber>62/372748</applicationNumber>
             <efsId></efsId>
             <firstNamedInventor>Massimo Ilario</firstNamedInventor>

@@ -76,6 +76,7 @@ object Create extends App {
     createPdfViaFop(outDir, MimeConstants.MIME_PDF, ".pdf")
     convertXML2FO(outDir, MimeConstants.MIME_XSL_FO, ".fo")
     createPdfViaFop(outDir, MimeConstants.MIME_PLAIN_TEXT, ".txt")
+    createPdfViaFop(outDir, MimeConstants.MIME_RTF, ".rtf")
   }
 
   def createHtml(outDir: String): Unit = {

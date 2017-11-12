@@ -267,6 +267,14 @@
                         <xsl:with-param name="jobs" select="experience/jobs"/>
                     </xsl:call-template>
 
+                    <xsl:call-template name="patents">
+                        <xsl:with-param name="patent" select="patents/patent"/>
+                    </xsl:call-template>
+
+                    <xsl:call-template name="education">
+                        <xsl:with-param name="degree" select="education/degree"/>
+                    </xsl:call-template>
+
                     <fo:block id="lastPage" />
                 </fo:flow>
             </fo:page-sequence>
@@ -280,12 +288,12 @@
                 <fo:table-column column-width="proportional-column-width(1)" />
                 <fo:table-body>
                     <fo:table-row>
-                        <fo:table-cell padding="{$littlePadding}">
+                        <fo:table-cell wrap-option="wrap" padding="{$littlePadding}">
                             <fo:block xsl:use-attribute-sets="nameBanner">
                                 <xsl:value-of select="contact/name/full"/>
                             </fo:block>
                         </fo:table-cell>
-                        <fo:table-cell xsl:use-attribute-sets="detailText" padding="{$littlePadding}">
+                        <fo:table-cell xsl:use-attribute-sets="detailText" wrap-option="wrap" padding="{$littlePadding}">
                             <fo:block text-align="right"><xsl:value-of select="contact/address/street"/></fo:block>
                             <fo:block text-align="right"><xsl:value-of select="contact/address/city"/>, <xsl:value-of select="contact/address/state"/><xsl:value-of select="contact/address/zip"/></fo:block>
                             <fo:block text-align="right"><xsl:value-of select="contact/phone"/></fo:block>
@@ -359,39 +367,93 @@
             <fo:block xsl:use-attribute-sets="sectionHeader"><xsl:text>PROFESSIONAL EXPERIENCE</xsl:text></fo:block>
             <xsl:for-each select="$jobs/job">
                 <fo:block xsl:use-attribute-sets="jobSpaceAfter">
-                <fo:block xsl:use-attribute-sets="detailBoldText"><fo:inline ><xsl:value-of select="company/@name"/></fo:inline>, <xsl:value-of select="company/@city"/>, <xsl:value-of select="company/@state"/> </fo:block>
-                <xsl:for-each select="positions/position">
-                    <fo:block text-align-last="justify">
-                        <fo:inline font-style="italic"><xsl:value-of select="title"/></fo:inline>
-                        <fo:leader leader-pattern="space"/>
-                        <fo:inline>
-                            <xsl:value-of select="format-date(dates/start, '[MNn,3-3] [Y0001]')"/>
-                            <xsl:text> - </xsl:text>
-                            <xsl:choose>
-                                <xsl:when test="string-length(dates/end) = 10">
-                                    <xsl:value-of select="format-date(dates/end, '[MNn,3-3] [Y0001]')"/>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <xsl:value-of select="dates/end"/>
-                                </xsl:otherwise>
-                            </xsl:choose>
-                        </fo:inline>
-                    </fo:block>
-                </xsl:for-each>
-                <fo:list-block>
-                    <xsl:for-each select="accomplishments/item">
-                        <fo:list-item margin-left="12px">
-                            <fo:list-item-label>
-                                <fo:block xsl:use-attribute-sets="detailText">•</fo:block>
-                            </fo:list-item-label>
-                            <fo:list-item-body>
-                                <fo:block xsl:use-attribute-sets="detailText" margin-left="12px"><xsl:value-of select="."/></fo:block>
-                            </fo:list-item-body>
-                        </fo:list-item>
+                    <fo:block xsl:use-attribute-sets="detailBoldText"><fo:inline ><xsl:value-of select="company/@name"/></fo:inline>, <xsl:value-of select="company/@city"/>, <xsl:value-of select="company/@state"/> </fo:block>
+                    <xsl:for-each select="positions/position">
+                        <xsl:sort select="format-date(dates/start, '[Y0001][MNn,3-3]')" order="descending"/>
+                        <fo:block text-align-last="justify">
+                            <fo:inline font-style="italic"><xsl:value-of select="title"/></fo:inline>
+                            <fo:leader leader-pattern="space"/>
+                            <fo:inline>
+                                <xsl:value-of select="format-date(dates/start, '[MNn,3-3] [Y0001]')"/>
+                                <xsl:text> - </xsl:text>
+                                <xsl:choose>
+                                    <xsl:when test="string-length(dates/end) = 10">
+                                        <xsl:value-of select="format-date(dates/end, '[MNn,3-3] [Y0001]')"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:value-of select="dates/end"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </fo:inline>
+                        </fo:block>
                     </xsl:for-each>
-                </fo:list-block>
+                    <fo:list-block>
+                        <xsl:for-each select="accomplishments/item">
+                            <fo:list-item margin-left="12px">
+                                <fo:list-item-label>
+                                    <fo:block xsl:use-attribute-sets="detailText">•</fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body>
+                                    <fo:block xsl:use-attribute-sets="detailText" margin-left="12px"><xsl:value-of select="."/></fo:block>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                        </xsl:for-each>
+                    </fo:list-block>
+                </fo:block>
+            </xsl:for-each>
+        </fo:block>
+    </xsl:template>
+
+    <xsl:template name="patents">
+        <xsl:param name="patent"/>
+        <fo:block xsl:use-attribute-sets="section" keep-together="always">
+            <fo:block xsl:use-attribute-sets="sectionHeader"><xsl:text>PATENTS</xsl:text></fo:block>
+            <xsl:for-each select="$patent">
+                <fo:block xsl:use-attribute-sets="jobSpaceAfter">
+                    <fo:block xsl:use-attribute-sets="detailBoldText">
+                        US Patent
+                        <xsl:choose>
+                            <xsl:when test="applicationNumber"> Pending, application number <xsl:value-of select="applicationNumber"/></xsl:when>
+                        </xsl:choose>
+                    </fo:block>
+                    <fo:block xsl:use-attribute-sets="detailText">
+                        <xsl:value-of select="title"/>
+                        <xsl:if test="firstNamedInventor">&#160;(Co-Inventor <xsl:value-of select="firstNamedInventor"/>) </xsl:if>
+                    </fo:block>
+                </fo:block>
+            </xsl:for-each>
+        </fo:block>
+    </xsl:template>
+
+    <xsl:template name="education">
+        <xsl:param name="degree"/>
+        <fo:block xsl:use-attribute-sets="section" keep-together="always">
+            <fo:block xsl:use-attribute-sets="sectionHeader"><xsl:text>EDUCATION</xsl:text></fo:block>
+            <xsl:for-each select="$degree">
+                <fo:block xsl:use-attribute-sets="jobSpaceAfter">
+                    <fo:block xsl:use-attribute-sets="detailBoldText">
+                        <xsl:value-of select="@title"/>, <fo:inline font-weight="normal"><xsl:value-of select="format-date(@grantDate, '[MNn,3-3] [Y0001]')"/></fo:inline>
+                    </fo:block>
+                    <fo:block xsl:use-attribute-sets="detailText">
+                        <xsl:value-of select="school/@name"/>, <xsl:value-of select="school/@city"/>, <xsl:value-of select="school/@state"/>
+                    </fo:block>
+
+                    <fo:block xsl:use-attribute-sets="detailText">
+                        <xsl:value-of select="comments"/>
+                    </fo:block>
                 </fo:block>
             </xsl:for-each>
         </fo:block>
     </xsl:template>
 </xsl:stylesheet>
+
+
+
+
+
+
+
+
+
+
+
