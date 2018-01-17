@@ -73,21 +73,20 @@ object Create extends App {
 
     createHtml(outDir)
 
-    createPdfViaFop(outDir, MimeConstants.MIME_PDF, ".pdf")
-    convertXML2FO(outDir, MimeConstants.MIME_XSL_FO, ".fo")
-    createPdfViaFop(outDir, MimeConstants.MIME_PLAIN_TEXT, ".txt")
-    createPdfViaFop(outDir, MimeConstants.MIME_RTF, ".rtf")
+//    createPdfViaFop(outDir, MimeConstants.MIME_PDF, ".pdf")
+ //   convertXML2FO(outDir, MimeConstants.MIME_XSL_FO, ".fo")
+  //  createPdfViaFop(outDir, MimeConstants.MIME_PLAIN_TEXT, ".txt")
+  //  createPdfViaFop(outDir, MimeConstants.MIME_RTF, ".rtf")
   }
 
   def createHtml(outDir: String): Unit = {
     val fac = TransformerFactory.newInstance()
-    val xform = fac.newTransformer(new StreamSource(getClass.getResourceAsStream("/xslt/html_xform.xsl")))
+    val xform = fac.newTransformer(new StreamSource(getClass.getResourceAsStream("/xslt/html/html_xform.xsl")))
     xform.transform(new StreamSource(getClass.getResourceAsStream("/xml/resume.xml")), new StreamResult(new File(outDir + "/resume.html")))
 
     // CSS
     copyResourceFile(outDir, "/css", "/style.css")
     // IMAGES
-    copyResourceFile(outDir, "/images", "/photo.jpg")
     copyResourceFile(outDir, "/images", "/bg-perpendicular.png")
     copyResourceFile(outDir, "/images", "/hover-1.gif")
     copyResourceFile(outDir, "/images", "/separation.png")

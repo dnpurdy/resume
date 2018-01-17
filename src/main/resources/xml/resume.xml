@@ -8,18 +8,18 @@
             <last>Purdy</last>
         </name>
         <address>
-            <street>823 N Maplewood Ave Apt 1</street>
+            <street>1658 N Milwaukee Ave, #100-5254</street>
             <city>Chicago</city>
             <state>IL</state>
-            <zip>60622</zip>
+            <zip>60647</zip>
         </address>
         <email>resume@davidpurdy.net</email>
         <phone>773-426-1268</phone>
         <website>http://www.davidpurdy.net</website>
         <github>https://github.com/dnpurdy</github>
     </contact>
-    <highlights>Creative, results driven technology leader with 8+ years of experience in application design,
-        development, troubleshooting and testing. Problem-solver with a passion for innovative solutions,
+    <highlights>Creative, results driven technology leader with 10+ years of experience in management, design,
+        development, and testing. Problem-solver with a passion for innovative solutions,
         rigorous systems thinking, and solving complex problems driven by market need. Skilled in grasping
         the big picture, leveraging existing solutions to enable next-step endeavors into new spaces that
         are sustainable, agile, and resource efficient. Focused on conceptualizing, developing, and
@@ -31,7 +31,6 @@
             <skill>Scala</skill>
             <skill>Perl</skill>
             <skill>XSLT/FO</skill>
-            <skill>C</skill>
             <skill>DHTML/XML</skill>
             <skill>Shell Scripting</skill>
         </skillSet>
@@ -41,9 +40,9 @@
         </skillSet>
         <skillSet type="Frameworks">
             <skill>Akka</skill>
+            <skill>Angular</skill>
             <skill>Spring Framework (2/3/4)</skill>
             <skill>PlayFramework</skill>
-            <skill>Wordpress</skill>
         </skillSet>
         <skillSet type="Networking">
             <skill>TCP/IP</skill>
@@ -63,10 +62,9 @@
             <skill>MySQL</skill>
         </skillSet>
         <skillSet type="Version Control">
-            <skill>SVN</skill>
             <skill>Git</skill>
+            <skill>SVN</skill>
             <skill>CVS</skill>
-            <skill>BitBucket</skill>
         </skillSet>
         <skillSet type="Cloud Services">
             <skill>Google Cloud (Dataflow,BigQuery,App Engine)</skill>
@@ -82,7 +80,7 @@
     <experience>
         <jobs>
             <job>
-                <company name="SwiftIQ" city="Chicago" state="Illinois"/>
+                <company name="SwiftIQ" city="Chicago" state="Illinois" web="http://www.swiftiq.com/"/>
                 <positions>
                     <position>
                         <title>Lead Platform Engineer</title>
@@ -90,27 +88,31 @@
                             <start>2015-03-01</start>
                             <end>2016-12-31</end>
                         </dates>
+                        <accomplishments>
+                            <item>Developed streamlined BigData/Massive Parallel pipelines for ingesting $50 billion of POS retail transactions annually, automating full receipt level data for top retails, brands and suppliers</item>
+                            <item>Conceived, designed, developed, and iterated multiple core platform applications, helping turn a pilot-only startup into a seven figure recurrent revenue business</item>
+                            <item>Designed and implemented a leading industry Out Of Stock inventory solution driven solely from POS transactions</item>
+                            <item>Lead principal development for propriety IP allowing for one-to-one mobile advertising to targeted mobile devices from physical offline POS transactions alone, patent pending</item>
+                        </accomplishments>
                     </position>
                     <position>
                         <title>Senior Engineering Mananger</title>
-                            <dates>
-                                <start>2017-01-01</start>
-                                <end>2017-08-18</end>
-                            </dates>
+                        <dates>
+                            <start>2017-01-01</start>
+                            <end>2017-08-18</end>
+                        </dates>
+                        <accomplishments>
+                            <item>Directed managed a startup team of 8 engineers and cofounders, split between local and remote locations</item>
+                            <item>Facilitated release planning, sprint planning, retrospective meetings, and work detail specifications</item>
+                            <item>Removed team impediments on a daily basis to allow the team to deliver the sprint goals and deliverables</item>
+                            <item>Collaborated with members of the Product, Marketing, Business, and Engineering Teams to develop and maintain product pipeline on strict money and time budgets</item>
+                            <item>Concurrently continued strategic, high-level development responsibilities from platform enginner position while engaging new mangerial responsiblities</item>
+                        </accomplishments>
                     </position>
                 </positions>
-                <accomplishments>
-                    <item>Developed streamlined BigData/Massive Parallel pipelines for ingesting $50 billion of POS retail
-                        transactions annually, automating full receipt level data for top retails, brands and suppliers</item>
-                    <item>Conceived, designed, developed, and iterated multiple core platform applications, helping
-                        turn a pilot-only startup into a seven figure recurrent revenue business</item>
-                    <item>Designed and implemented a leading industry Out Of Stock inventory solution driven solely from POS transactions</item>
-                    <item>Lead principal development for propriety IP allowing for one-to-one mobile advertising to targeted mobile devices
-                        from physical offline POS transactions alone, patent pending</item>
-                </accomplishments>
             </job>
             <job>
-                <company name="Firm58" city="Chicago" state="Illinois"/>
+                <company name="Firm58" city="Chicago" state="Illinois" web="http://www.firm58.com"/>
                 <positions>
                     <position>
                         <title>Application Developer/Integration Manager</title>
@@ -118,6 +120,27 @@
                             <start>2011-03-01</start>
                             <end>2015-03-01</end>
                         </dates>
+                        <accomplishments>
+                            <item>Designed, implemented, and deployed a enterprise wide conversion from licensed, proprietary
+                                container technology to free, open-source alternatives saving significant resources and improving
+                                operational efficiency and reliability</item>
+                            <item>Produced a high performance, massively parallelizable compliance and surveillance engine for
+                                identifying problematic trading patterns within customer data; took the product through its full life-cycle
+                                from ideation, through development, and into market delivery</item>
+                            <item>Spearheaded the adoption of industry standard practices and libraries within the code base long
+                                burdened with custom development, as well as the use of innovative and premier technologies
+                                including cloud infrastructures, improved database paradigms, and advanced development languages</item>
+                            <item>Collaborated with operational staff to personally support data center operations including hardware
+                                replacement and maintenance, physical IT resource allocation/planning, and disaster recovery needs</item>
+                            <item>Specialized in benchmark tuning and application troubleshooting across the entire IT stack to
+                                extract increased performance and stability while correcting difficult cross-technology flaws</item>
+                            <item>Used clear, top-down approaches to financial systems technology – from high level business
+                                modeling to low level database optimization – to produce scalable first-in-class technology solutions
+                                serving a wide variety of market customers from individual traders to entire exchanges</item>
+                            <item>Worked directly with offshore development teams to distribute easily delegated responsibilities
+                                while maintaining managerial review of the quality of the work product, reducing costs and allowing
+                                for faster parallel integrations</item>
+                        </accomplishments>
                     </position>
                     <position>
                         <title>Deployment/Integration Engineer</title>
@@ -125,43 +148,27 @@
                             <start>2009-07-01</start>
                             <end>2011-03-01</end>
                         </dates>
+                        <accomplishments>
+                            <item>Individually developed custom transactional loading software to streamline Firm58's critical, core
+                                ETL layer, replacing complicated and outdated infrastructure with a simplified, modern alternative</item>
+                            <item>Leveraged a variety of open source, proprietary, and custom technologies to extract, transform, and
+                                load data from nearly 75 data vendors into a single normalized data model</item>
+                            <item>Authored complex and business critical queries and reports to provide clear, straight-forward
+                                analytical insight of client trading data, costs, and trends, as well as in-house system performance
+                                metrics</item>
+                            <item>Single resource for the creation and maintenance of no-touch, fully automated client data loading
+                                infrastructure and scripts for 30+ clients and 100 million daily contracted transactions</item>
+                            <item>On call and responsive process, systems, and server administration for high demand and high
+                                visibility clients with time and data sensitive requirements</item>
+                        </accomplishments>
                     </position>
                 </positions>
                 <accomplishments>
-                    <item>Designed, implemented, and deployed a enterprise wide conversion from licensed, proprietary
-                        container technology to free, open-source alternatives saving significant resources and improving
-                        operational efficiency and reliability</item>
-                    <item>Individually developed custom transactional loading software to streamline Firm58's critical, core
-                        ETL layer, replacing complicated and outdated infrastructure with a simplified, modern alternative</item>
-                    <item>Produced a high performance, massively parallelizable compliance and surveillance engine for
-                        identifying problematic trading patterns within customer data; took the product through its full life-cycle
-                        from ideation, through development, and into market delivery</item>
-                    <item>Spearheaded the adoption of industry standard practices and libraries within the code base long
-                        burdened with custom development, as well as the use of innovative and premier technologies
-                        including cloud infrastructures, improved database paradigms, and advanced development languages</item>
-                    <item>Specialized in benchmark tuning and application troubleshooting across the entire IT stack to
-                        extract increased performance and stability while correcting difficult cross-technology flaws</item>
-                    <item>Collaborated with operational staff to personally support data center operations including hardware
-                        replacement and maintenance, physical IT resource allocation/planning, and disaster recovery needs</item>
-                    <item>Single resource for the creation and maintenance of no-touch, fully automated client data loading
-                        infrastructure and scripts for 30+ clients and 100 million daily contracted transactions</item>
-                    <item>Leveraged a variety of open source, proprietary, and custom technologies to extract, transform, and
-                        load data from nearly 75 data vendors into a single normalized data model</item>
-                    <item>Authored complex and business critical queries and reports to provide clear, straight-forward
-                        analytical insight of client trading data, costs, and trends, as well as in-house system performance
-                        metrics</item>
-                    <item>Used clear, top-down approaches to financial systems technology – from high level business
-                        modeling to low level database optimization – to produce scalable first-in-class technology solutions
-                        serving a wide variety of market customers from individual traders to entire exchanges</item>
-                    <item>On call and responsive process, systems, and server administration for high demand and high
-                        visibility clients with time and data sensitive requirements</item>
-                    <item>Worked directly with offshore development teams to distribute easily delegated responsibilities
-                        while maintaining managerial review of the quality of the work product, reducing costs and allowing
-                        for faster parallel integrations</item>
+
                 </accomplishments>
             </job>
             <job>
-                <company name="JWiley Photography" city="Chicago" state="Illinois"/>
+                <company name="JWiley Photography" city="Chicago" state="Illinois" web="http://www.jwileyphotography.com"/>
                 <positions>
                     <position>
                         <title>Strategic and Technical Consultant</title>
@@ -169,52 +176,44 @@
                             <start>2008-05-01</start>
                             <end>2008-10-01</end>
                         </dates>
+                        <accomplishments>
+                            <item>Developed the initial web presence and online advertising infrastructure for a fledging media
+                                oriented artist</item>
+                            <item>Main point person for strategic and business planning decisions for a growing small business</item>
+                            <item>Provided and configured free Linux servers and work-flow solutions to maximize limited resources</item>
+                            <item>Set up and maintained an Apache web presence, Postfix mail servers, fail-safe redundant RAID file
+                                and cloud backup solutions, as well as automated BASH scripts for seamless digital product
+                                management</item>
+                        </accomplishments>
                     </position>
                 </positions>
-                <accomplishments>
-                    <item>Developed the initial web presence and online advertising infrastructure for a fledging media
-                        oriented artist</item>
-                    <item>Main point person for strategic and business planning decisions for a growing small business</item>
-                    <item>Provided and configured free Linux servers and work-flow solutions to maximize limited resources</item>
-                    <item>Set up and maintained an Apache web presence, Postfix mail servers, fail-safe redundant RAID file
-                        and cloud backup solutions, as well as automated BASH scripts for seamless digital product
-                        management</item>
-                </accomplishments>
-
             </job>
             <job>
-                <company name="Citadel Investment Group" city="Chicago" state="Illinois"/>
+                <company name="Citadel Investment Group" city="Chicago" state="Illinois" web="https://www.citadel.com/"/>
                 <positions>
                     <position>
                         <title>Senior Associate</title>
                         <dates>
-                            <start>2007-01-01</start>
+                            <start>2005-03-01</start>
                             <end>2007-09-01</end>
                         </dates>
-                    </position>
-                    <position>
-                        <title>Operations Analyst/Associate</title>
-                        <dates>
-                            <start>2005-03-01</start>
-                            <end>2006-12-01</end>
-                        </dates>
+                        <accomplishments>
+                            <item>Provided critical back-office and operational support for all styles of over-the-counter swaps (credit,
+                                equity, futures, and interest rate derivatives) for $19B hedge fund</item>
+                            <item>Intense focus on fixed income and total return swap processing optimization, including automation
+                                of tasks and transition to high performance back-end solutions</item>
+                            <item>Designed and wrote bespoke technology solutions to accommodate difficult, complex, and hard to
+                                define products into existing booking, reconciliation, accounting, and reporting systems to ensure
+                                consistency and compliance in both out of the box and proprietary back-end systems</item>
+                            <item>Worked directly with, and as a liaison between, trading, development, operations, and accounting
+                                staff to develop, implement, and improve technology solutions across systems. This utilized diverse
+                                technologies such as PERL, Python, C, and SQL languages in both development and production
+                                environments</item>
+                            <item>Coordinated the study, modeling, and tracking of company-wide capacity metrics to ensure necessary staffing levels
+                                despite changing market conditions</item>
+                        </accomplishments>
                     </position>
                 </positions>
-                <accomplishments>
-                    <item>Provided critical back-office and operational support for all styles of over-the-counter swaps (credit,
-                        equity, futures, and interest rate derivatives) for $19B hedge fund</item>
-                    <item>Intense focus on fixed income and total return swap processing optimization, including automation
-                        of tasks and transition to high performance back-end solutions</item>
-                    <item>Designed and wrote bespoke technology solutions to accommodate difficult, complex, and hard to
-                        define products into existing booking, reconciliation, accounting, and reporting systems to ensure
-                        consistency and compliance in both out of the box and proprietary back-end systems</item>
-                    <item>Worked directly with, and as a liaison between, trading, development, operations, and accounting
-                        staff to develop, implement, and improve technology solutions across systems. This utilized diverse
-                        technologies such as PERL, Python, C, and SQL languages in both development and production
-                        environments</item>
-                    <item>Coordinated the study, modeling, and tracking of company-wide capacity metrics to ensure necessary staffing levels
-                        despite changing market conditions</item>
-                </accomplishments>
             </job>
         </jobs>
     </experience>
