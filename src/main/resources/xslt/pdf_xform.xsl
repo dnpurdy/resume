@@ -21,7 +21,7 @@
         <xsl:text>Times</xsl:text>
     </xsl:variable>
     <xsl:variable name="smallFontSize">
-        <xsl:text>10</xsl:text>
+        <xsl:text>9</xsl:text>
     </xsl:variable>
 
     <xsl:attribute-set name="nameBanner">
@@ -418,6 +418,8 @@
                     </fo:block>
                     <fo:block xsl:use-attribute-sets="detailText">
                         <xsl:value-of select="title"/>
+                    </fo:block>
+                        <fo:block xsl:use-attribute-sets="detailText">
                         <xsl:if test="firstNamedInventor">&#160;(Co-Inventor <xsl:value-of select="firstNamedInventor"/>) </xsl:if>
                     </fo:block>
                 </fo:block>

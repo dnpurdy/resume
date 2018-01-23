@@ -39,8 +39,8 @@
             <skill>Windows</skill>
         </skillSet>
         <skillSet type="Frameworks">
-            <skill>Akka</skill>
             <skill>Angular</skill>
+            <skill>Akka</skill>
             <skill>Spring Framework (2/3/4)</skill>
             <skill>PlayFramework</skill>
         </skillSet>
@@ -89,10 +89,10 @@
                             <end>2016-12-31</end>
                         </dates>
                         <accomplishments>
-                            <item>Developed streamlined BigData/Massive Parallel pipelines for ingesting $50 billion of POS retail transactions annually, automating full receipt level data for top retails, brands and suppliers</item>
+                            <item>Developed streamlined BigData/Massive Parallel pipelines for ingesting $50 billion of POS retail transactions annually, automating full receipt level data for top retailers, brands and suppliers</item>
                             <item>Conceived, designed, developed, and iterated multiple core platform applications, helping turn a pilot-only startup into a seven figure recurrent revenue business</item>
-                            <item>Designed and implemented a leading industry Out Of Stock inventory solution driven solely from POS transactions</item>
-                            <item>Lead principal development for propriety IP allowing for one-to-one mobile advertising to targeted mobile devices from physical offline POS transactions alone, patent pending</item>
+                            <item>Designed and implemented a industry leading Out-of-Stock inventory solution driven solely from POS transactions</item>
+                            <item>Principal developer for propriety IP allowing for one-to-one mobile advertising to targeted mobile devices using physical offline POS transactions alone. Patent Pending</item>
                         </accomplishments>
                     </position>
                     <position>
@@ -102,11 +102,11 @@
                             <end>2017-08-18</end>
                         </dates>
                         <accomplishments>
-                            <item>Directed managed a startup team of 8 engineers and cofounders, split between local and remote locations</item>
+                            <item>Directly managed a startup team of 8 engineers and cofounders, split between local and remote locations</item>
                             <item>Facilitated release planning, sprint planning, retrospective meetings, and work detail specifications</item>
                             <item>Removed team impediments on a daily basis to allow the team to deliver the sprint goals and deliverables</item>
                             <item>Collaborated with members of the Product, Marketing, Business, and Engineering Teams to develop and maintain product pipeline on strict money and time budgets</item>
-                            <item>Concurrently continued strategic, high-level development responsibilities from platform enginner position while engaging new mangerial responsiblities</item>
+                            <item>Concurrently continued strategic, high-level development responsibilities from platform engineer position while engaging new managerial responsibilities</item>
                         </accomplishments>
                     </position>
                 </positions>
@@ -232,7 +232,7 @@
             <title>System and method for determining purchase records of mobile devices to provide effective mobile advertising</title>
             <applicationNumber>14/990964</applicationNumber>
             <efsId>24567828</efsId>
-            <firstNamedInventor>Spencer J Lee</firstNamedInventor>
+            <firstNamedInventor>Spencer J. Lee</firstNamedInventor>
             <attorneyDocketNumber>15356-0004</attorneyDocketNumber>
         </patent>
         <patent>
