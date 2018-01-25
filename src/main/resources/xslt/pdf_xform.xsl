@@ -21,7 +21,7 @@
         <xsl:text>Times</xsl:text>
     </xsl:variable>
     <xsl:variable name="smallFontSize">
-        <xsl:text>9</xsl:text>
+        <xsl:text>8</xsl:text>
     </xsl:variable>
 
     <xsl:attribute-set name="nameBanner">
@@ -62,6 +62,14 @@
         </xsl:attribute>
         <xsl:attribute name="color">black</xsl:attribute>
         <xsl:attribute name="font-weight">bold</xsl:attribute>
+        <xsl:attribute name="font-size"><xsl:value-of select="floor($smallFontSize*1.25)" />pt</xsl:attribute>
+    </xsl:attribute-set>
+    <xsl:attribute-set name="detailItalicText">
+        <xsl:attribute name="font-family">
+            <xsl:value-of select="$mainFont" />
+        </xsl:attribute>
+        <xsl:attribute name="color">black</xsl:attribute>
+        <xsl:attribute name="font-style">italic</xsl:attribute>
         <xsl:attribute name="font-size"><xsl:value-of select="floor($smallFontSize*1.25)" />pt</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="jobSpaceAfter">
@@ -371,9 +379,9 @@
                     <xsl:for-each select="positions/position">
                         <xsl:sort select="format-date(dates/start, '[Y0001][MNn,3-3]')" order="descending"/>
                         <fo:block text-align-last="justify">
-                            <fo:inline font-style="italic"><xsl:value-of select="title"/></fo:inline>
+                            <fo:inline xsl:use-attribute-sets="detailItalicText"><xsl:value-of select="title"/></fo:inline>
                             <fo:leader leader-pattern="space"/>
-                            <fo:inline>
+                            <fo:inline xsl:use-attribute-sets="detailText">
                                 <xsl:value-of select="format-date(dates/start, '[MNn,3-3] [Y0001]')"/>
                                 <xsl:text> - </xsl:text>
                                 <xsl:choose>

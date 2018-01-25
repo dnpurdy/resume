@@ -81,11 +81,13 @@ object Create extends App {
 
   def createHtml(outDir: String): Unit = {
     val fac = TransformerFactory.newInstance()
-    val xform = fac.newTransformer(new StreamSource(getClass.getResourceAsStream("/xslt/html/html_xform.xsl")))
+    val xform = fac.newTransformer(new StreamSource(getClass.getResourceAsStream("/xslt/html/html_xform2.xsl")))
+    xform.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes")
     xform.transform(new StreamSource(getClass.getResourceAsStream("/xml/resume.xml")), new StreamResult(new File(outDir + "/resume.html")))
 
     // CSS
     copyResourceFile(outDir, "/css", "/style.css")
+    copyResourceFile(outDir, "/css", "/style2.css")
     // IMAGES
     copyResourceFile(outDir, "/images", "/bg-perpendicular.png")
     copyResourceFile(outDir, "/images", "/hover-1.gif")
