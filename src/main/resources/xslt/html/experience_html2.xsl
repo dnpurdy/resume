@@ -20,11 +20,11 @@
                     <xsl:for-each select="positions/position">
                         <xsl:sort select="dates/end" order="descending"/>
                         <div class="row">
-                            <div class="col-md-5 offset-md-1">
-                                <b><xsl:value-of select="title"/></b>
+                            <div class="col-md-6">
+                                <strong><xsl:value-of select="title"/></strong>
                             </div>
-                            <div class="col-md-5 text-right">
-                                <b>
+                            <div class="col-md-6 text-right">
+                                <strong>
                                     <xsl:value-of select="format-date(dates/start, '[MNn,3-3] [Y0001]')"/> -
                                     <xsl:choose>
                                         <xsl:when test="normalize-space(dates/end) = 'Present' "><xsl:text>Present</xsl:text></xsl:when>
@@ -32,9 +32,9 @@
                                             <xsl:value-of select="format-date(dates/end, '[MNn,3-3] [Y0001]')"/>
                                         </xsl:otherwise>
                                     </xsl:choose>
-                                </b>
+                                </strong>
                             </div>
-                            <div class="col-md-10 offset-md-1">
+                            <div xsl:use-attribute-sets="wideDetails">
                                 <ul>
                                     <xsl:for-each select="accomplishments/item">
                                         <li><xsl:value-of select="."/></li>

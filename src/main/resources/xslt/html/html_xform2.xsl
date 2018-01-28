@@ -12,28 +12,29 @@
     <xsl:output indent="yes"/>
 
     <xsl:attribute-set name="sectionHeader">
-        <xsl:attribute name="class">col-md-10 offset-md-2</xsl:attribute>
+        <!--<xsl:attribute name="class">col-md-10 offset-md-2</xsl:attribute>-->
+        <xsl:attribute name="class">col-md-10 offset-md-1</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="leftColumn">
-        <xsl:attribute name="class">col-md-2 hidden-xs-down</xsl:attribute>
+        <xsl:attribute name="class">col-md-2 text-center text-md-left d-print-none d-none d-md-block</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="centerColumn">
-        <xsl:attribute name="class">col-md-5</xsl:attribute>
+        <xsl:attribute name="class">col text-center</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="rightColumn">
-        <xsl:attribute name="class">col-md-5 text-md-right</xsl:attribute>
+        <xsl:attribute name="class">col-md-5 text-center text-md-right</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="wideDetails">
-        <xsl:attribute name="class">col-md-10 offset-md-1</xsl:attribute>
+        <xsl:attribute name="class">col-md-12</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="insetDetails">
         <xsl:attribute name="class">col-md-8 offset-md-2</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="skillLeft">
-        <xsl:attribute name="class">col-md-3 offset-md-1</xsl:attribute>
+        <xsl:attribute name="class">col-md-4 text-md-right</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="skillRight">
-        <xsl:attribute name="class">col-md-7</xsl:attribute>
+        <xsl:attribute name="class">col-md-8</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:template match="/resume">

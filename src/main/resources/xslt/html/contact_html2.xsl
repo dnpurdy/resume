@@ -8,15 +8,19 @@
 
         <div class="jumbotron">
 
-            <div class="row">
+            <div class="row align-items-center">
                 <div xsl:use-attribute-sets="leftColumn">
-                    <img class="img-fluid float-left hidden-xs-small d-print-none" alt="my resume photo">
+                    <img class="img-fluid float-left" alt="my resume photo">
                         <xsl:attribute name="src" select="concat($contactInfo/github,'.png?size=150')"/>
                     </img>
 
                 </div>
                 <div xsl:use-attribute-sets="centerColumn">
-                    <h1 class="display-4"><xsl:value-of select="$contactInfo/name/full"/></h1>
+                    <h1 class="display-4">
+                        <span class="align-middle">
+                            <xsl:value-of select="$contactInfo/name/full"/>
+                        </span>
+                    </h1>
                 </div>
                 <div xsl:use-attribute-sets="rightColumn">
                     <address>

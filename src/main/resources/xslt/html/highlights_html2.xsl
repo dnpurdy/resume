@@ -11,7 +11,7 @@
                         <h2>Highlights</h2>
                     </div>
                     <div xsl:use-attribute-sets="wideDetails">
-                        <xsl:value-of select="."/>
+                        <div class="bump box"><xsl:value-of select="."/></div>
                     </div>
                 </div>
             </section>

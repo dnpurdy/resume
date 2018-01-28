@@ -14,7 +14,7 @@
                 <div class="row">
                     <xsl:for-each select="skillSet">
                         <div xsl:use-attribute-sets="skillLeft">
-                            <b><xsl:value-of select="@type"/>:</b>
+                            <strong><xsl:value-of select="@type"/>:</strong>
                         </div>
                         <div xsl:use-attribute-sets="skillRight">
                             <xsl:value-of select="skill" separator=", "/>

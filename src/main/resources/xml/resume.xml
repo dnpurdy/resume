@@ -61,11 +61,6 @@
             <skill>Hadoop (Hive, HBase)</skill>
             <skill>MySQL</skill>
         </skillSet>
-        <skillSet type="Version Control">
-            <skill>Git</skill>
-            <skill>SVN</skill>
-            <skill>CVS</skill>
-        </skillSet>
         <skillSet type="Cloud Services">
             <skill>Google Cloud (Dataflow,BigQuery,App Engine)</skill>
             <skill>Amazon AWS (S3/EC2)</skill>
@@ -75,6 +70,11 @@
             <skill>Atlassian Products (JIRA, Confluence, Fisheye)</skill>
             <skill>NetSuite</skill>
             <skill>37Signals/Basecamp</skill>
+        </skillSet>
+        <skillSet type="Version Control">
+            <skill>Git</skill>
+            <skill>SVN</skill>
+            <skill>CVS</skill>
         </skillSet>
     </skills>
     <experience>

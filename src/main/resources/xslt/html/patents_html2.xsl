@@ -14,11 +14,13 @@
                 <xsl:for-each select="patent">
                     <div class="row">
                         <div xsl:use-attribute-sets="wideDetails">
-                            <b><xsl:value-of select="title"/></b>
+                            <strong><xsl:value-of select="title"/></strong>
                         </div>
-                        <div xsl:use-attribute-sets="insetDetails">
-                            Application Number: <xsl:value-of select="applicationNumber"/>,
-                            Co-Inventor: <xsl:value-of select="firstNamedInventor"/>
+                        <div xsl:use-attribute-sets="wideDetails">
+                            <div class="bump">Co-Inventor: <xsl:value-of select="firstNamedInventor"/></div>
+                        </div>
+                        <div xsl:use-attribute-sets="wideDetails">
+                            <div class="bump">Application Number: <xsl:value-of select="applicationNumber"/></div>
                         </div>
                     </div>
                 </xsl:for-each>
