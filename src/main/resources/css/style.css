@@ -14,7 +14,8 @@ body {
 }
 
 body, input, button, select, textarea, .navbar-search .search-query {
-    font-family: 'Droid Sans', sans-serif; color:#444
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:#444
 }
 
 .bump {

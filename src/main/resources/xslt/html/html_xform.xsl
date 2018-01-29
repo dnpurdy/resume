@@ -12,8 +12,7 @@
     <xsl:output indent="yes"/>
 
     <xsl:attribute-set name="sectionHeader">
-        <!--<xsl:attribute name="class">col-md-10 offset-md-2</xsl:attribute>-->
-        <xsl:attribute name="class">col-md-10 offset-md-1</xsl:attribute>
+        <xsl:attribute name="class">col-md-12</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="leftColumn">
         <xsl:attribute name="class">col-md-2 text-center text-md-left d-print-none d-none d-md-block</xsl:attribute>
