@@ -7,25 +7,23 @@
         <xsl:param name="educationInfo"/>
 
         <xsl:for-each select="$educationInfo">
-            <div class="row">
-                <div xsl:use-attribute-sets="sectionHeader">
-                    <h2>Education</h2>
+            <section>
+                <div class="row">
+                    <div xsl:use-attribute-sets="sectionHeader">
+                        <h2>Education</h2>
+                    </div>
                 </div>
-            </div>
-            <xsl:for-each select="degree">
-                <section>
+                <xsl:for-each select="degree">
                     <div class="row">
-                        <div class="col-md-11 col-md-offset-1">
-                            <h3><xsl:value-of select="@title"/></h3>
-                            <h4><xsl:value-of select="school/@name"/></h4>
-                            <h5><xsl:value-of select="format-date(@grantDate, '[MNn,3-3] [Y0001]')"/></h5>
-                            <ul>
-                                <li><xsl:value-of select="comments"/></li>
-                            </ul>
+                        <div xsl:use-attribute-sets="wideDetails">
+                            <strong><xsl:value-of select="@title"/></strong>
+                        </div>
+                        <div xsl:use-attribute-sets="wideDetails">
+                            <div class="bump"><xsl:value-of select="school/@name"/> - <xsl:value-of select="format-date(@grantDate, '[MNn,3-3] [Y0001]')"/></div>
                         </div>
                     </div>
-                </section>
-            </xsl:for-each>
+                </xsl:for-each>
+            </section>
         </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>

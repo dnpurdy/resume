@@ -8,13 +8,12 @@
             <section>
                 <div class="row">
                     <div xsl:use-attribute-sets="sectionHeader">
-                        <!--<a name="highlights" class="division"/>-->
                         <h2>Highlights</h2>
-                    </div><!-- col-md-8 -->
-                    <div class="col-md-11 col-md-offset-1">
-                        <xsl:value-of select="."/>
-                    </div><!-- col-md-8 -->
-                </div><!-- row -->
+                    </div>
+                    <div xsl:use-attribute-sets="wideDetails">
+                        <div class="bump box"><xsl:value-of select="."/></div>
+                    </div>
+                </div>
             </section>
         </xsl:for-each>
     </xsl:template>

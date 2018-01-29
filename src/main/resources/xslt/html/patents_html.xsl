@@ -6,24 +6,24 @@
 
         <xsl:for-each select="$patentInfo">
             <section>
-
                 <div class="row">
                     <div xsl:use-attribute-sets="sectionHeader">
                         <h2>Patents</h2>
                     </div>
                 </div>
                 <xsl:for-each select="patent">
-                    <div class="clearfix">
-                        <div class="col-sm-11 col-sm-offset-1">
-                            <p class="font-weight-bold"><xsl:value-of select="title"/></p>
+                    <div class="row">
+                        <div xsl:use-attribute-sets="wideDetails">
+                            <strong><xsl:value-of select="title"/></strong>
                         </div>
-                        <div class="col-sm-10 col-sm-offset-2">
-                            Application Number: <xsl:value-of select="applicationNumber"/>,
-                            Co-Inventor: <xsl:value-of select="firstNamedInventor"/>
+                        <div xsl:use-attribute-sets="wideDetails">
+                            <div class="bump">Co-Inventor: <xsl:value-of select="firstNamedInventor"/></div>
+                        </div>
+                        <div xsl:use-attribute-sets="wideDetails">
+                            <div class="bump">Application Number: <xsl:value-of select="applicationNumber"/></div>
                         </div>
                     </div>
                 </xsl:for-each>
-
             </section>
         </xsl:for-each>
     </xsl:template>

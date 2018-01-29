@@ -26,7 +26,7 @@
         implementing solutions while partnering closely with business leaders and C-level executives
         to turn the next big ideas into technological realities.</highlights>
     <skills>
-        <skillSet type="Lanugages">
+        <skillSet type="Languages">
             <skill>Java</skill>
             <skill>Scala</skill>
             <skill>Perl</skill>
@@ -62,8 +62,8 @@
             <skill>MySQL</skill>
         </skillSet>
         <skillSet type="Cloud Services">
-            <skill>Google Cloud (Dataflow,BigQuery,App Engine)</skill>
-            <skill>Amazon AWS (S3/EC2)</skill>
+            <skill>Google Cloud (Dataflow, BigQuery, AppEngine)</skill>
+            <skill>Amazon AWS (S3, EC2, Route53)</skill>
             <skill>Heroku</skill>
         </skillSet>
         <skillSet type="Product Management">
@@ -96,13 +96,13 @@
                         </accomplishments>
                     </position>
                     <position>
-                        <title>Senior Engineering Mananger</title>
+                        <title>Senior Engineering Manager</title>
                         <dates>
                             <start>2017-01-01</start>
                             <end>2017-08-18</end>
                         </dates>
                         <accomplishments>
-                            <item>Directly managed a startup team of 8 engineers and cofounders, split between local and remote locations</item>
+                            <item>Directly managed a startup team of 8 engineers and co-founders, split between local and remote locations</item>
                             <item>Facilitated release planning, sprint planning, retrospective meetings, and work detail specifications</item>
                             <item>Removed team impediments on a daily basis to allow the team to deliver the sprint goals and deliverables</item>
                             <item>Collaborated with members of the Product, Marketing, Business, and Engineering Teams to develop and maintain product pipeline on strict money and time budgets</item>
@@ -127,16 +127,8 @@
                             <item>Produced a high performance, massively parallelizable compliance and surveillance engine for
                                 identifying problematic trading patterns within customer data; took the product through its full life-cycle
                                 from ideation, through development, and into market delivery</item>
-                            <item>Spearheaded the adoption of industry standard practices and libraries within the code base long
-                                burdened with custom development, as well as the use of innovative and premier technologies
-                                including cloud infrastructures, improved database paradigms, and advanced development languages</item>
                             <item>Collaborated with operational staff to personally support data center operations including hardware
                                 replacement and maintenance, physical IT resource allocation/planning, and disaster recovery needs</item>
-                            <item>Specialized in benchmark tuning and application troubleshooting across the entire IT stack to
-                                extract increased performance and stability while correcting difficult cross-technology flaws</item>
-                            <item>Used clear, top-down approaches to financial systems technology – from high level business
-                                modeling to low level database optimization – to produce scalable first-in-class technology solutions
-                                serving a wide variety of market customers from individual traders to entire exchanges</item>
                             <item>Worked directly with offshore development teams to distribute easily delegated responsibilities
                                 while maintaining managerial review of the quality of the work product, reducing costs and allowing
                                 for faster parallel integrations</item>
@@ -152,18 +144,13 @@
                             <item>Individually developed custom transactional loading software to streamline Firm58's critical, core
                                 ETL layer, replacing complicated and outdated infrastructure with a simplified, modern alternative</item>
                             <item>Leveraged a variety of open source, proprietary, and custom technologies to extract, transform, and
-                                load data from nearly 75 data vendors into a single normalized data model</item>
+                                load data from nearly 75 data vendors and 100 million daily contracted transactions into a single normalized data model</item>
                             <item>Authored complex and business critical queries and reports to provide clear, straight-forward
                                 analytical insight of client trading data, costs, and trends, as well as in-house system performance
                                 metrics</item>
-                            <item>Single, on-call resource for the creation and maintenance of no-touch, fully automated client data loading
-                                infrastructure and scripts for 30+ clients and 100 million daily contracted transactions</item>
                         </accomplishments>
                     </position>
                 </positions>
-                <accomplishments>
-
-                </accomplishments>
             </job>
             <job>
                 <company name="JWiley Photography" city="Chicago" state="Illinois" web="http://www.jwileyphotography.com"/>
@@ -175,13 +162,10 @@
                             <end>2008-10-01</end>
                         </dates>
                         <accomplishments>
-                            <item>Developed the initial web presence and online advertising infrastructure for a fledging media
-                                oriented artist</item>
+                            <item>Developed the initial web presence and online advertising infrastructure for a fledging media oriented artist</item>
                             <item>Main point person for strategic and business planning decisions for a growing small business</item>
                             <item>Provided and configured free Linux servers and work-flow solutions to maximize limited resources</item>
-                            <item>Set up and maintained an Apache web presence, Postfix mail servers, fail-safe redundant RAID file
-                                and cloud backup solutions, as well as automated BASH scripts for seamless digital product
-                                management</item>
+                            <item>Set up and maintained an Apache web presence, Postfix mail servers, fail-safe redundant RAID file and cloud backup solutions, as well as automated BASH scripts for seamless digital product management</item>
                         </accomplishments>
                     </position>
                 </positions>
@@ -196,19 +180,10 @@
                             <end>2007-09-01</end>
                         </dates>
                         <accomplishments>
-                            <item>Provided critical back-office and operational support for all styles of over-the-counter swaps (credit,
-                                equity, futures, and interest rate derivatives) for $19B hedge fund</item>
-                            <item>Intense focus on fixed income and total return swap processing optimization, including automation
-                                of tasks and transition to high performance back-end solutions</item>
-                            <item>Designed and wrote bespoke technology solutions to accommodate difficult, complex, and hard to
-                                define products into existing booking, reconciliation, accounting, and reporting systems to ensure
-                                consistency and compliance in both out of the box and proprietary back-end systems</item>
-                            <item>Worked directly with, and as a liaison between, trading, development, operations, and accounting
-                                staff to develop, implement, and improve technology solutions across systems. This utilized diverse
-                                technologies such as PERL, Python, C, and SQL languages in both development and production
-                                environments</item>
-                            <item>Coordinated the study, modeling, and tracking of company-wide capacity metrics to ensure necessary staffing levels
-                                despite changing market conditions</item>
+                            <item>Provided critical back-office and operational support for all styles of over-the-counter swaps (credit, equity, futures, and interest rate derivatives) for $19B hedge fund</item>
+                            <item>Intense focus on process optimization, including automation of tasks and transition to high performance back-end solutions</item>
+                            <item>Worked with trading, development, operations, and accounting staff to develop, implement, and improve technology solutions across company systems</item>
+                            <item>Coordinated the study, modeling, and tracking of company-wide capacity metrics to ensure necessary staffing levels</item>
                         </accomplishments>
                     </position>
                 </positions>
@@ -236,7 +211,7 @@
         <patent>
             <title>System and method for determining affinity, relative value, trip missions and drivers of relative items</title>
             <applicationNumber>62/372748</applicationNumber>
-            <efsId></efsId>
+            <efsId/>
             <firstNamedInventor>Massimo Ilario</firstNamedInventor>
             <attorneyDocketNumber>15356-0004</attorneyDocketNumber>
         </patent>

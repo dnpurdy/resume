@@ -6,7 +6,7 @@ import javax.xml.transform.sax.SAXResult
 import javax.xml.transform.stream.{StreamResult, StreamSource}
 
 import org.apache.commons.io.{FileUtils, IOUtils}
-import org.apache.fop.apps.{Fop, FopConfParser, FopFactory, FopFactoryBuilder}
+import org.apache.fop.apps.FopFactory
 import org.apache.xmlgraphics.util.MimeConstants
 
 /**
@@ -14,11 +14,17 @@ import org.apache.xmlgraphics.util.MimeConstants
   */
 object Create extends App {
 
-  def createPdfViaFop(outDir: String, t: String, ext: String) = {
-    /*val xconf = new File(this.getClass.getClassLoader.getResource("conf/fop.xconf").getPath)
-    val parser = new FopConfParser(xconf) //parsing configuration
-    def builder = parser.getFopFactoryBuilder(); //building the factory with the user options*/
-    def fopFactory = FopFactory.newInstance(new File(".").toURI())
+  val outDir = "/tmp/resume"
+
+  createHtml(outDir)
+
+  createPdfViaFop(outDir, MimeConstants.MIME_PDF, ".pdf")
+  convertXML2FO(outDir, MimeConstants.MIME_XSL_FO, ".fo")
+  createPdfViaFop(outDir, MimeConstants.MIME_PLAIN_TEXT, ".txt")
+  createPdfViaFop(outDir, MimeConstants.MIME_RTF, ".rtf")
+
+  def createPdfViaFop(outDir: String, t: String, ext: String): Unit = {
+    def fopFactory = FopFactory.newInstance(new File(".").toURI)
     val foUserAgent = fopFactory.newFOUserAgent()
     val out: OutputStream = new BufferedOutputStream(new FileOutputStream(new File(outDir+"/resume"+ext)))
 
@@ -68,34 +74,17 @@ object Create extends App {
     }
   }
 
-  override def main(args: Array[String]): Unit = {
-    val outDir = "/tmp/resume"
-
-    createHtml(outDir)
-
-    createPdfViaFop(outDir, MimeConstants.MIME_PDF, ".pdf")
-    convertXML2FO(outDir, MimeConstants.MIME_XSL_FO, ".fo")
-    createPdfViaFop(outDir, MimeConstants.MIME_PLAIN_TEXT, ".txt")
-    createPdfViaFop(outDir, MimeConstants.MIME_RTF, ".rtf")
-  }
-
   def createHtml(outDir: String): Unit = {
     val fac = TransformerFactory.newInstance()
-    val xform = fac.newTransformer(new StreamSource(getClass.getResourceAsStream("/xslt/html/html_xform2.xsl")))
+    val xform = fac.newTransformer(new StreamSource(getClass.getResourceAsStream("/xslt/html/html_xform.xsl")))
     xform.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes")
     xform.transform(new StreamSource(getClass.getResourceAsStream("/xml/resume.xml")), new StreamResult(new File(outDir + "/resume.html")))
 
     // CSS
     copyResourceFile(outDir, "/css", "/style.css")
-    copyResourceFile(outDir, "/css", "/style2.css")
-    // IMAGES
-    copyResourceFile(outDir, "/images", "/bg-perpendicular.png")
-    copyResourceFile(outDir, "/images", "/hover-1.gif")
-    copyResourceFile(outDir, "/images", "/separation.png")
-    copyResourceFile(outDir, "/images", "/social.png")
   }
 
-  def copyResourceFile(outputDir: String, parentPath: String, file: String) = {
+  def copyResourceFile(outputDir: String, parentPath: String, file: String): Unit = {
     FileUtils.forceMkdir(new File(outputDir + parentPath))
     IOUtils.copy(getClass.getResourceAsStream(parentPath+file), new FileOutputStream(new File(outputDir+parentPath+file)))
   }
