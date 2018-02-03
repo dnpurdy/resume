@@ -30,9 +30,9 @@
             <skill>Java</skill>
             <skill>Scala</skill>
             <skill>Perl</skill>
-            <skill>XSLT/FO</skill>
-            <skill>DHTML/XML</skill>
             <skill>Shell Scripting</skill>
+		<skill>XSLT/FO</skill>
+            <skill>DHTML/XML</skill>
         </skillSet>
         <skillSet type="Operating Systems">
             <skill>Linux (Ubuntu, Debian, Redhat, Centos 5/6)</skill>
@@ -55,9 +55,9 @@
         </skillSet>
         <skillSet type="Database">
             <skill>BigQuery</skill>
-            <skill>Oracle DB</skill>
-            <skill>PL/SQL</skill>
             <skill>MongoDB</skill>
+		<skill>Oracle DB</skill>
+            <skill>PL/SQL</skill>
             <skill>Hadoop (Hive, HBase)</skill>
             <skill>MySQL</skill>
         </skillSet>

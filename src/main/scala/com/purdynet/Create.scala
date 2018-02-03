@@ -26,7 +26,7 @@ object Create extends App {
   def createPdfViaFop(outDir: String, t: String, ext: String): Unit = {
     def fopFactory = FopFactory.newInstance(new File(".").toURI)
     val foUserAgent = fopFactory.newFOUserAgent()
-    val out: OutputStream = new BufferedOutputStream(new FileOutputStream(new File(outDir+"/resume"+ext)))
+    val out: OutputStream = new BufferedOutputStream(new FileOutputStream(new File(outDir+"/DavidPurdy-resume"+ext)))
 
 
     try {
@@ -53,7 +53,7 @@ object Create extends App {
   @throws(classOf[IOException])
   @throws(classOf[TransformerException])
   def convertXML2FO(outDir: String, t: String, ext: String) {
-    val out: OutputStream = new BufferedOutputStream(new FileOutputStream(new File(outDir+"/resume"+ext)))
+    val out: OutputStream = new BufferedOutputStream(new FileOutputStream(new File(outDir+"/DavidPurdy-resume"+ext)))
 
     try {
       //Setup XSLT

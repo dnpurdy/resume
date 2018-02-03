@@ -43,19 +43,19 @@
                         </a>
                         <br/>
                         <a>
-                            <xsl:attribute name="href" select="string('resume.pdf')"/>
+                            <xsl:attribute name="href" select="string('DavidPurdy-resume.pdf')"/>
                             <xsl:attribute name="class" select="string('btn btn-default btn-sm')"/>
                             PDF
                             <i class="fa fa-file-pdf-o" aria-hidden="true">&#160;</i>
                         </a>
                         <a>
-                            <xsl:attribute name="href" select="string('resume.rtf')"/>
+                            <xsl:attribute name="href" select="string('DavidPurdy-resume.rtf')"/>
                             <xsl:attribute name="class" select="string('btn btn-default btn-sm')"/>
                             RTF
                             <i class="fa fa-file-text-o" aria-hidden="true">&#160;</i>
                         </a>
                         <a>
-                            <xsl:attribute name="href" select="string('resume.txt')"/>
+                            <xsl:attribute name="href" select="string('DavidPurdy-resume.txt')"/>
                             <xsl:attribute name="class" select="string('btn btn-default btn-sm')"/>
                             TXT
                             <i class="fa fa-file-text-o" aria-hidden="true">&#160;</i>
