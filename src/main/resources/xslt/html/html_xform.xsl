@@ -9,7 +9,7 @@
     <xsl:import href="src/main/resources/xslt/html/patents_html.xsl"/>
     <xsl:import href="src/main/resources/xslt/html/education_html.xsl"/>
 
-    <xsl:output indent="yes"/>
+    <xsl:output method="html" indent="yes"/>
 
     <xsl:attribute-set name="sectionHeader">
         <xsl:attribute name="class">col-md-12</xsl:attribute>
@@ -40,6 +40,16 @@
         <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
         <html lang="en">
             <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-114212979-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114212979-1');
+</script>
+
                 <meta charset="UTF-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <title><xsl:value-of select="contact/name/full"/></title>
