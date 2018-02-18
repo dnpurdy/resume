@@ -42,6 +42,12 @@
                             <xsl:value-of select="$contactInfo/github"/>
                         </a>
                         <br/>
+                        <abbr title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true">&#160;</i>:</abbr>
+                        <a>
+                            <xsl:attribute name="href" select="$contactInfo/linkedin"/>
+                            <xsl:value-of select="$contactInfo/linkedin"/>
+                        </a>
+                        <br/>
                         <a>
                             <xsl:attribute name="href" select="string('DavidPurdy-resume.pdf')"/>
                             <xsl:attribute name="class" select="string('btn btn-default btn-sm')"/>
