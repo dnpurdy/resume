@@ -6,12 +6,15 @@ import javax.xml.transform.stream.{StreamResult, StreamSource}
 import javax.xml.transform.{OutputKeys, TransformerFactory}
 import org.apache.commons.io.{FileUtils, IOUtils}
 
-class CreateHtml(outDir: String) {
+class HtmlCreator(outDir: String) {
+  val xslSourceFilename = "/xslt/html/html_xform.xsl"
+  val xmlSourceFilename = "/xml/resume.xml"
+
   def create(): Unit = {
     val fac = TransformerFactory.newInstance()
-    val xform = fac.newTransformer(new StreamSource(getClass.getResourceAsStream("/xslt/html/html_xform.xsl")))
+    val xform = fac.newTransformer(new StreamSource(getClass.getResourceAsStream(xslSourceFilename)))
     xform.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes")
-    xform.transform(new StreamSource(getClass.getResourceAsStream("/xml/resume.xml")), new StreamResult(new File(outDir + "/resume.html")))
+    xform.transform(new StreamSource(getClass.getResourceAsStream(xmlSourceFilename)), new StreamResult(new File(outDir + "/resume.html")))
 
     // CSS
     copyResourceFile(outDir, "/css", "/style.css")

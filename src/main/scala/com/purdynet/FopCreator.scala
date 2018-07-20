@@ -8,7 +8,7 @@ import javax.xml.transform.{Result, Transformer, TransformerFactory}
 import org.apache.fop.apps.FopFactory
 import org.apache.xmlgraphics.util.MimeConstants
 
-class CreateFop(outDir: String) {
+class FopCreator(outDir: String) {
   val documentPrefix = "DavidPurdy-resume"
   val xslSourceFilename = "/xslt/pdf_xform.xsl"
   val xmlSourceFilename = "/xml/resume.xml"
