@@ -394,6 +394,7 @@
                                 </xsl:choose>
                             </fo:inline>
                         </fo:block>
+                        <xsl:if test="accomplishments/item">
                         <fo:list-block>
                             <xsl:for-each select="accomplishments/item">
                                 <fo:list-item margin-left="12px">
@@ -406,6 +407,7 @@
                                 </fo:list-item>
                             </xsl:for-each>
                         </fo:list-block>
+                        </xsl:if>
                     </xsl:for-each>
                 </fo:block>
             </xsl:for-each>

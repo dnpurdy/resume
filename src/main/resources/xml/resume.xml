@@ -81,6 +81,19 @@
     <experience>
         <jobs>
             <job>
+                <company name="Cantina Consulting" city="Boston" state="Massachusetts" web="http://www.cantina.co"/>
+                <positions>
+                    <position>
+                        <title>Principal Technical Consultant</title>
+                        <dates>
+                            <start>2018-07-16</start>
+                        </dates>
+                        <accomplishments>
+                        </accomplishments>
+                    </position>
+                </positions>
+            </job>
+            <job>
                 <company name="SwiftIQ" city="Chicago" state="Illinois" web="http://www.swiftiq.com/"/>
                 <positions>
                     <position>
