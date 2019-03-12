@@ -8,10 +8,10 @@
             <last>Purdy</last>
         </name>
         <address>
-            <street>1658 N Milwaukee Ave, #100-5254</street>
-            <city>Chicago</city>
-            <state>IL</state>
-            <zip>60647</zip>
+            <street>412 Centre Street #3</street>
+            <city>Boston</city>
+            <state>MA</state>
+            <zip>02130</zip>
         </address>
         <email>resume@davidpurdy.net</email>
         <phone>773-426-1268</phone>
@@ -84,7 +84,7 @@
                 <company name="Cantina Consulting" city="Boston" state="Massachusetts" web="http://www.cantina.co"/>
                 <positions>
                     <position>
-                        <title>Principal Technical Consultant</title>
+                        <title>Principal Engineer</title>
                         <dates>
                             <start>2018-07-16</start>
                         </dates>
@@ -217,7 +217,7 @@
     <patents>
         <patent>
             <title>System and method for determining purchase records of mobile devices to provide effective mobile advertising</title>
-            <number>US10204359B1</number>
+            <number>US10204359</number>
             <link>https://patentimages.storage.googleapis.com/75/7f/d4/2fe73ebdafd0f4/US10204359.pdf</link>
             <applicationNumber>14/990964</applicationNumber>
             <efsId>24567828</efsId>

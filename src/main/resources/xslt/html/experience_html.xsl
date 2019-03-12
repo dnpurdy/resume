@@ -28,6 +28,7 @@
                                     <xsl:value-of select="format-date(dates/start, '[MNn,3-3] [Y0001]')"/> -
                                     <xsl:choose>
                                         <xsl:when test="normalize-space(dates/end) = 'Present' "><xsl:text>Present</xsl:text></xsl:when>
+                                        <xsl:when test="normalize-space(dates/end) = '' "><xsl:text>Present</xsl:text></xsl:when>
                                         <xsl:otherwise>
                                             <xsl:value-of select="format-date(dates/end, '[MNn,3-3] [Y0001]')"/>
                                         </xsl:otherwise>

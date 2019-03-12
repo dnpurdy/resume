@@ -14,14 +14,40 @@
                 <xsl:for-each select="patent">
                     <div class="row">
                         <div xsl:use-attribute-sets="wideDetails">
-                            <strong><xsl:value-of select="title"/></strong>
+                            <strong>
+                                <xsl:choose>
+                                    <xsl:when test="link">
+                                        <xsl:element name="a">
+                                            <xsl:attribute name="href">
+                                                <xsl:value-of select="link"/>
+                                            </xsl:attribute>
+                                            <xsl:value-of select="number"/>:
+                                        </xsl:element>
+                                        <xsl:value-of select="title"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:value-of select="title"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </strong>
                         </div>
+
+                        <xsl:choose>
+                            <xsl:when test="not(number)">
+                                <div xsl:use-attribute-sets="wideDetails">
+                                    <div class="bump">Application Number:
+                                        <xsl:value-of select="applicationNumber"/>
+                                    </div>
+                                </div>
+                            </xsl:when>
+                        </xsl:choose>
+
                         <div xsl:use-attribute-sets="wideDetails">
-                            <div class="bump">Co-Inventor: <xsl:value-of select="firstNamedInventor"/></div>
+                            <div class="bump">Co-Inventor:
+                                <xsl:value-of select="firstNamedInventor"/>
+                            </div>
                         </div>
-                        <div xsl:use-attribute-sets="wideDetails">
-                            <div class="bump">Application Number: <xsl:value-of select="applicationNumber"/></div>
-                        </div>
+
                     </div>
                 </xsl:for-each>
             </section>
