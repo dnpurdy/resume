@@ -32,7 +32,7 @@
             <skill>Scala</skill>
             <skill>Perl</skill>
             <skill>Shell Scripting</skill>
-		<skill>XSLT/FO</skill>
+		    <skill>XSLT/FO</skill>
             <skill>DHTML/XML</skill>
         </skillSet>
         <skillSet type="Operating Systems">
@@ -57,7 +57,7 @@
         <skillSet type="Database">
             <skill>BigQuery</skill>
             <skill>MongoDB</skill>
-		<skill>Oracle DB</skill>
+		    <skill>Oracle DB</skill>
             <skill>PL/SQL</skill>
             <skill>Hadoop (Hive, HBase)</skill>
             <skill>MySQL</skill>
