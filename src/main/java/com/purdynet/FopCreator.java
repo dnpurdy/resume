@@ -63,7 +63,7 @@ public class FopCreator {
     }
 
     private Transformer createTransformer(final String xslSource) throws TransformerConfigurationException {
-        TransformerFactory factory = TransformerFactory.newInstance();
+        TransformerFactory factory = new net.sf.saxon.TransformerFactoryImpl();
         StreamSource xslt = new StreamSource(getClass().getResourceAsStream(xslSource));
         Transformer transformer = factory.newTransformer(xslt);
         transformer.setParameter("versionParam", "2.0");
