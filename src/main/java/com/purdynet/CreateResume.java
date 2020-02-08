@@ -1,5 +1,6 @@
 package com.purdynet;
 
+import org.apache.commons.cli.*;
 import org.apache.fop.apps.FOPException;
 
 import javax.xml.transform.TransformerException;
@@ -11,16 +12,25 @@ public class CreateResume {
      *
      * @param args an array of String arguments to be parsed
      */
-    public void run(final String[] args) throws TransformerException, IOException, FOPException {
-        final String outDir = "/Users/david.purdy/resume";
+    public void run(final String[] args) throws TransformerException, IOException, FOPException, ParseException {
+        Options options = new Options();
+        options.addOption("o", true, "display current time");
+        CommandLineParser parser = new DefaultParser();
+        CommandLine cmd = parser.parse( options, args);
 
-        HtmlCreator htmlCreator = new HtmlCreator(outDir);
-        htmlCreator.create();
+        if (cmd.hasOption("o")) {
+            final String outDir = cmd.getOptionValue("o");
 
-        FopCreator fopCreator = new FopCreator(outDir);
-        fopCreator.createPdf();
-        fopCreator.createTxt();
-        fopCreator.createRtf();
-        fopCreator.createFo();
+            HtmlCreator htmlCreator = new HtmlCreator(outDir);
+            htmlCreator.create();
+
+            FopCreator fopCreator = new FopCreator(outDir);
+            fopCreator.createPdf();
+            fopCreator.createTxt();
+            fopCreator.createRtf();
+            fopCreator.createFo();
+        } else {
+            throw new IllegalArgumentException("No outdir!");
+        }
     }
 }
