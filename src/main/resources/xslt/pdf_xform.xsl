@@ -421,10 +421,15 @@
             <xsl:for-each select="$patent">
                 <fo:block xsl:use-attribute-sets="jobSpaceAfter">
                     <fo:block xsl:use-attribute-sets="detailBoldText">
-                        US Patent
                         <xsl:choose>
-                            <xsl:when test="number"> Number <xsl:value-of select="number"/></xsl:when>
-                            <xsl:when test="applicationNumber"> Pending, application number <xsl:value-of select="applicationNumber"/></xsl:when>
+                            <xsl:when test="number">
+                                <fo:basic-link external-destination="url({link})" color="blue">
+                                US Patent Number <xsl:value-of select="number"/>
+                                </fo:basic-link>
+                            </xsl:when>
+                            <xsl:when test="applicationNumber">
+                                US Patent Pending, application number <xsl:value-of select="applicationNumber"/>
+                            </xsl:when>
                         </xsl:choose>
                     </fo:block>
                     <fo:block xsl:use-attribute-sets="detailText">

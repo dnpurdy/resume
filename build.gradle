@@ -1,0 +1,24 @@
+apply plugin: 'java'
+
+jar {
+    baseName = 'resume'
+    version =  '0.0.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+dependencies {
+    compile 'commons-cli:commons-cli:+'
+    compile 'commons-io:commons-io:+'
+    compile 'org.apache.commons:commons-lang3:+'
+    compile 'net.sf.saxon:Saxon-HE:+'
+    compile 'org.apache.xmlgraphics:batik-bridge:+'
+    compile 'org.apache.xmlgraphics:xmlgraphics-commons:+'
+    compile 'org.apache.xmlgraphics:fop:+'
+}
+

@@ -30,37 +30,27 @@
         <skillSet type="Languages">
             <skill>Java</skill>
             <skill>Scala</skill>
-            <skill>Perl</skill>
-            <skill>Shell Scripting</skill>
-		    <skill>XSLT/FO</skill>
-            <skill>DHTML/XML</skill>
+            <skill>JS/TS</skill>
         </skillSet>
         <skillSet type="Operating Systems">
-            <skill>Linux (Ubuntu, Debian, Redhat, Centos 5/6)</skill>
+            <skill>Linux</skill>
             <skill>Windows</skill>
         </skillSet>
         <skillSet type="Frameworks">
             <skill>Angular</skill>
+            <skill>Spring Framework/Boot</skill>
             <skill>Akka</skill>
-            <skill>Spring Framework (2/3/4)</skill>
-            <skill>PlayFramework</skill>
         </skillSet>
         <skillSet type="Networking">
             <skill>TCP/IP</skill>
-            <skill>RPC</skill>
-            <skill>HTTP</skill>
+            <skill>HTTPS/TLS</skill>
             <skill>DNS</skill>
-            <skill>DHCP</skill>
-            <skill>SSL</skill>
-            <skill>JSEE/Servlets (Weblogic/Tomcat)</skill>
+            <skill>Firewall</skill>
         </skillSet>
         <skillSet type="Database">
             <skill>BigQuery</skill>
             <skill>MongoDB</skill>
-		    <skill>Oracle DB</skill>
-            <skill>PL/SQL</skill>
-            <skill>Hadoop (Hive, HBase)</skill>
-            <skill>MySQL</skill>
+		    <skill>RDBMS (MySQL/PostGres/Oracle</skill>
         </skillSet>
         <skillSet type="Cloud Services">
             <skill>Google Cloud (Dataflow, BigQuery, AppEngine)</skill>
@@ -70,12 +60,10 @@
         <skillSet type="Product Management">
             <skill>Atlassian Products (JIRA, Confluence, Fisheye)</skill>
             <skill>NetSuite</skill>
-            <skill>37Signals/Basecamp</skill>
         </skillSet>
         <skillSet type="Version Control">
             <skill>Git</skill>
             <skill>SVN</skill>
-            <skill>CVS</skill>
         </skillSet>
     </skills>
     <experience>
@@ -89,6 +77,9 @@
                             <start>2018-07-16</start>
                         </dates>
                         <accomplishments>
+                            <item>Provides direction and technical expertise in design, development and systems integration; guides project teams through design, implementation and testing phases and reviews the completed work effectively</item>
+                            <item>Holds regular communication with direct reports to manage utilization, performance, job satisfaction and career growth</item>
+                            <item>Communicates daily with the client, performs project planning, provides regular updates on project status, project steering, tracking budget against work that needs to get done</item>
                         </accomplishments>
                     </position>
                 </positions>
