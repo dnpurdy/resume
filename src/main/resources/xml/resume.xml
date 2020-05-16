@@ -37,9 +37,11 @@
             <skill>Windows</skill>
         </skillSet>
         <skillSet type="Frameworks">
+            <skill>MEAN</skill>
             <skill>Angular</skill>
+            <skill>React Native</skill>
             <skill>Spring Framework/Boot</skill>
-            <skill>Akka</skill>
+            <skill>LAMP</skill>
         </skillSet>
         <skillSet type="Networking">
             <skill>TCP/IP</skill>
@@ -48,18 +50,18 @@
             <skill>Firewall</skill>
         </skillSet>
         <skillSet type="Database">
-            <skill>BigQuery</skill>
+            <skill>RDBMS (MySQL/PostGres/Oracle)</skill>
             <skill>MongoDB</skill>
-		    <skill>RDBMS (MySQL/PostGres/Oracle</skill>
+            <skill>BigQuery</skill>
         </skillSet>
         <skillSet type="Cloud Services">
+            <skill>Amazon AWS (S3, EC2, VPC, IAM, Route53)</skill>
             <skill>Google Cloud (Dataflow, BigQuery, AppEngine)</skill>
-            <skill>Amazon AWS (S3, EC2, Route53)</skill>
-            <skill>Heroku</skill>
         </skillSet>
         <skillSet type="Product Management">
-            <skill>Atlassian Products (JIRA, Confluence, Fisheye)</skill>
+            <skill>Atlassian Products (JIRA, Confluence)</skill>
             <skill>NetSuite</skill>
+            <skill>Mavenlink</skill>
         </skillSet>
         <skillSet type="Version Control">
             <skill>Git</skill>
@@ -77,6 +79,7 @@
                             <start>2018-07-16</start>
                         </dates>
                         <accomplishments>
+                            <item>Lead a 2-team engineering effort for green field Electronic Health Record product from concept to industry leading, mature product offering</item>
                             <item>Provides direction and technical expertise in design, development and systems integration; guides project teams through design, implementation and testing phases and reviews the completed work effectively</item>
                             <item>Holds regular communication with direct reports to manage utilization, performance, job satisfaction and career growth</item>
                             <item>Communicates daily with the client, performs project planning, provides regular updates on project status, project steering, tracking budget against work that needs to get done</item>
