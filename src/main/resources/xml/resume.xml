@@ -19,12 +19,12 @@
         <github>https://github.com/dnpurdy</github>
         <linkedin>https://linkedin.com/in/david-purdy</linkedin>
     </contact>
-    <highlights>Creative, results driven technology leader with 10+ years of experience in management, design,
+    <highlights>Creative, results driven technology leader with 10+ years of experience in strategy, management, design,
         development, and testing. Problem-solver with a passion for innovative solutions,
         rigorous systems thinking, and solving complex problems driven by market need. Skilled in grasping
         the big picture, leveraging existing solutions to enable next-step endeavors into new spaces that
         are sustainable, agile, and resource efficient. Focused on conceptualizing, developing, and
-        implementing solutions while partnering closely with business leaders and C-level executives
+        implementing solutions while partnering closely with key stakeholders
         to turn the next big ideas into technological realities.</highlights>
     <skills>
         <skillSet type="Languages">
@@ -38,9 +38,8 @@
         </skillSet>
         <skillSet type="Frameworks">
             <skill>MEAN</skill>
-            <skill>Angular</skill>
+            <<skill>Spring Framework/Boot</skill>
             <skill>React Native</skill>
-            <skill>Spring Framework/Boot</skill>
             <skill>LAMP</skill>
         </skillSet>
         <skillSet type="Networking">
@@ -74,15 +73,16 @@
                 <company name="Cantina Consulting" city="Boston" state="Massachusetts" web="http://www.cantina.co"/>
                 <positions>
                     <position>
-                        <title>Principal Engineer</title>
+                        <title>Managing Principal Engineer</title>
                         <dates>
                             <start>2018-07-16</start>
                         </dates>
                         <accomplishments>
-                            <item>Lead a 2-team engineering effort for green field Electronic Health Record product from concept to industry leading, mature product offering</item>
-                            <item>Provides direction and technical expertise in design, development and systems integration; guides project teams through design, implementation and testing phases and reviews the completed work effectively</item>
-                            <item>Holds regular communication with direct reports to manage utilization, performance, job satisfaction and career growth</item>
-                            <item>Communicates daily with the client, performs project planning, provides regular updates on project status, project steering, tracking budget against work that needs to get done</item>
+                            <item>Developed strategic plans, timelines, and technical expertise for ideation, development, and deployment of all client products and projects</item>
+                            <item>Ensured technology standards and best practices while maintaining compliance with appropriate requirements, laws, and regulations (HIPAA, FCRA, et al)</item>
+                            <item>Managed both senior and junior level direct reports, including utilization, mentorship, performance review, and individual career development</item>
+                            <item>Collaborated with Sales and Innovation teams to grow client pipeline, revenue, and client relationships through direct efforts and industry conference</item>
+                            <item>Worked consistently to transform organizations toward modern SDLC models, updated infrastructure solutions and processes out of legacy technical debt</item>
                         </accomplishments>
                     </position>
                 </positions>
