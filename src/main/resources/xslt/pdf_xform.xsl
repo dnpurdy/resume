@@ -254,7 +254,7 @@
     <xsl:template match="/resume">
         <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
             <fo:layout-master-set>
-                <fo:simple-page-master master-name="allpages" page-height="11in" page-width="8.5in" margin-top=".5in" margin-bottom=".5in" margin-left=".5in" margin-right=".5in">
+                <fo:simple-page-master master-name="allpages" page-height="11in" page-width="8.5in" margin-top=".6in" margin-bottom=".6in" margin-left=".5in" margin-right=".5in">
                     <fo:region-body/>
                 </fo:simple-page-master>
             </fo:layout-master-set>
@@ -375,7 +375,19 @@
             <fo:block xsl:use-attribute-sets="sectionHeader"><xsl:text>PROFESSIONAL EXPERIENCE</xsl:text></fo:block>
             <xsl:for-each select="$jobs/job">
                 <fo:block xsl:use-attribute-sets="jobSpaceAfter">
-                    <fo:block xsl:use-attribute-sets="detailBoldText"><fo:inline ><xsl:value-of select="company/@name"/></fo:inline>, <xsl:value-of select="company/@city"/>, <xsl:value-of select="company/@state"/> </fo:block>
+                    <fo:block xsl:use-attribute-sets="detailBoldText">
+                            <xsl:choose>
+                                <xsl:when test="company/@web != '' ">
+                                    <fo:basic-link external-destination="url({company/@web})" color="blue">
+                                        <fo:inline><xsl:value-of select="company/@name"/></fo:inline>
+                                    </fo:basic-link>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <fo:inline><xsl:value-of select="company/@name"/></fo:inline>
+                                </xsl:otherwise>
+                            </xsl:choose>, <xsl:value-of select="company/@city"/>, <xsl:value-of select="company/@state"/>
+                        <xsl:if test="company/@acquired != ''"><fo:inline white-space="pre" font-style="italic">     (Acquired: <xsl:value-of select="company/@acquired"/>)</fo:inline></xsl:if>
+                            </fo:block>
                     <xsl:for-each select="positions/position">
                         <xsl:sort select="format-date(dates/start, '[Y0001][MNn,3-3]')" order="descending"/>
                         <fo:block text-align-last="justify">
@@ -389,7 +401,7 @@
                                         <xsl:value-of select="format-date(dates/end, '[MNn,3-3] [Y0001]')"/>
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <xsl:value-of select="dates/end"/>
+                                        <xsl:text>Present</xsl:text>
                                     </xsl:otherwise>
                                 </xsl:choose>
                             </fo:inline>

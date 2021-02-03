@@ -8,10 +8,10 @@
             <last>Purdy</last>
         </name>
         <address>
-            <street>412 Centre Street #3</street>
-            <city>Boston</city>
+            <street>28 Madison St</street>
+            <city>Medford</city>
             <state>MA</state>
-            <zip>02130</zip>
+            <zip>02155</zip>
         </address>
         <email>resume@davidpurdy.net</email>
         <phone>773-426-1268</phone>
@@ -32,19 +32,25 @@
             <skill>Scala</skill>
             <skill>JS/TS</skill>
         </skillSet>
+        <skillSet type="Containerization">
+            <skill>Docker</skill>
+            <skill>Kubernetes</skill>
+            <skill>Docker Swarm</skill>
+        </skillSet>
         <skillSet type="Operating Systems">
             <skill>Linux</skill>
             <skill>Windows</skill>
         </skillSet>
         <skillSet type="Frameworks">
             <skill>MEAN</skill>
-            <<skill>Spring Framework/Boot</skill>
+            <skill>Spring Framework/Boot</skill>
             <skill>React Native</skill>
             <skill>LAMP</skill>
         </skillSet>
         <skillSet type="Networking">
             <skill>TCP/IP</skill>
             <skill>HTTPS/TLS</skill>
+            <skill>SSL (x509)</skill>
             <skill>DNS</skill>
             <skill>Firewall</skill>
         </skillSet>
@@ -62,9 +68,12 @@
             <skill>NetSuite</skill>
             <skill>Mavenlink</skill>
         </skillSet>
-        <skillSet type="Version Control">
+        <skillSet type="Version Control / CICD">
             <skill>Git</skill>
             <skill>SVN</skill>
+            <skill>Jenkins</skill>
+            <skill>TeamCity</skill>
+            <skill>Bamboo</skill>
         </skillSet>
     </skills>
     <experience>
@@ -73,9 +82,19 @@
                 <company name="Cantina Consulting" city="Boston" state="Massachusetts" web="http://www.cantina.co"/>
                 <positions>
                     <position>
+                        <title>VP Engineering</title>
+                        <dates>
+                            <start>2021-02-01</start>
+                        </dates>
+                        <accomplishments>
+                            <item/>
+                        </accomplishments>
+                    </position>
+                    <position>
                         <title>Managing Principal Engineer</title>
                         <dates>
                             <start>2018-07-16</start>
+                            <end>2021-01-31</end>
                         </dates>
                         <accomplishments>
                             <item>Developed strategic plans, timelines, and technical expertise for ideation, development, and deployment of all client products and projects</item>
@@ -88,7 +107,7 @@
                 </positions>
             </job>
             <job>
-                <company name="SwiftIQ" city="Chicago" state="Illinois" web="http://www.swiftiq.com/"/>
+                <company name="SwiftIQ" city="Chicago" state="Illinois" web="http://www.swiftiq.com/" acquired="Jan 2020"/>
                 <positions>
                     <position>
                         <title>Lead Platform Engineer</title>
@@ -120,7 +139,7 @@
                 </positions>
             </job>
             <job>
-                <company name="Firm58" city="Chicago" state="Illinois" web="http://www.firm58.com"/>
+                <company name="Firm58" city="Chicago" state="Illinois" web="http://www.firm58.com" acquired="Apr 2018"/>
                 <positions>
                     <position>
                         <title>Application Developer/Integration Manager</title>
