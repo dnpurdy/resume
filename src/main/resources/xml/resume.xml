@@ -29,8 +29,8 @@
     <skills>
         <skillSet type="Languages">
             <skill>Java</skill>
+            <skill>JavasScript/TypeScript</skill>
             <skill>Scala</skill>
-            <skill>JS/TS</skill>
         </skillSet>
         <skillSet type="Containerization">
             <skill>Docker</skill>
@@ -87,7 +87,11 @@
                             <start>2021-02-01</start>
                         </dates>
                         <accomplishments>
-                            <item/>
+                            <item>Worked collaboratively with the C-Suite to help define the company’s overall strategic direction and create the long term roadmap for technology</item>
+                            <item>Drove the execution of technology roadmap within the confines of time, resources and market needs</item>
+                            <item>Researched, implemented, and developed advanced technologies to meet future product technology requirements</item>
+                            <item>Supervised recruitment, training, retention, and organization of all Engineering staff in accordance with the company policies and budget requirements</item>
+                            <item>Set the direction for the management processes for the technical aspects of company’s client work</item>
                         </accomplishments>
                     </position>
                     <position>
@@ -97,7 +101,7 @@
                             <end>2021-01-31</end>
                         </dates>
                         <accomplishments>
-                            <item>Developed strategic plans, timelines, and technical expertise for ideation, development, and deployment of all client products and projects</item>
+                            <item>Developed strategic plans and technical expertise for ideation, development, and deployment of all client products and projects</item>
                             <item>Ensured technology standards and best practices while maintaining compliance with appropriate requirements, laws, and regulations (HIPAA, FCRA, et al)</item>
                             <item>Managed both senior and junior level direct reports, including utilization, mentorship, performance review, and individual career development</item>
                             <item>Collaborated with Sales and Innovation teams to grow client pipeline, revenue, and client relationships through direct efforts and industry conference</item>
