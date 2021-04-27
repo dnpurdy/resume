@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <xsl:for-each select="positions/position">
-                        <xsl:sort select="dates/end" order="descending"/>
+                        <xsl:sort select="dates/start" order="descending"/>
                         <div class="row">
                             <div class="col-md-6">
                                 <strong><xsl:value-of select="title"/></strong>
