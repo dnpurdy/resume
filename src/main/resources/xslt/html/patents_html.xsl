@@ -21,7 +21,10 @@
                                             <xsl:attribute name="href">
                                                 <xsl:value-of select="link"/>
                                             </xsl:attribute>
-                                            <xsl:value-of select="number"/>:
+                                            <xsl:choose>
+                                                <xsl:when test="number"><xsl:value-of select="number"/></xsl:when>
+                                                <xsl:otherwise><xsl:value-of select="applicationNumber"/></xsl:otherwise>
+                                            </xsl:choose>:
                                         </xsl:element>
                                         <xsl:value-of select="title"/>
                                     </xsl:when>
