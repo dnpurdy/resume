@@ -13,24 +13,29 @@ public class CreateResume {
      * @param args an array of String arguments to be parsed
      */
     public void run(final String[] args) throws TransformerException, IOException, FOPException, ParseException {
-        Options options = new Options();
-        options.addOption("o", true, "display current time");
-        CommandLineParser parser = new DefaultParser();
-        CommandLine cmd = parser.parse( options, args);
+        final CommandLineParser parser = new DefaultParser();
+        final CommandLine cmd = parser.parse(getOptions(), args);
 
-        if (cmd.hasOption("o")) {
-            final String outDir = cmd.getOptionValue("o");
+        final String outDir = validateOutDir(cmd);
 
-            HtmlCreator htmlCreator = new HtmlCreator(outDir);
-            htmlCreator.create();
+        HtmlCreator.create(outDir);
+        FopCreator.createPdf(outDir);
+        FopCreator.createTxt(outDir);
+        FopCreator.createRtf(outDir);
+        FopCreator.createFo(outDir);
+    }
 
-            FopCreator fopCreator = new FopCreator(outDir);
-            fopCreator.createPdf();
-            fopCreator.createTxt();
-            fopCreator.createRtf();
-            fopCreator.createFo();
-        } else {
+    private static String validateOutDir(final CommandLine cmd) {
+        if (!cmd.hasOption("o")) {
             throw new IllegalArgumentException("No outdir!");
+        } else {
+            return cmd.getOptionValue("o");
         }
+    }
+
+    private Options getOptions() {
+        Options options = new Options();
+        options.addOption("o", true, "output directory");
+        return options;
     }
 }

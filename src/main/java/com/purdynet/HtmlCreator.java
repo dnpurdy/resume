@@ -3,7 +3,10 @@ package com.purdynet;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 
-import javax.xml.transform.*;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.File;
@@ -18,6 +21,11 @@ public class HtmlCreator {
 
     public HtmlCreator(final String outDir) {
         this.outDir = outDir;
+    }
+
+    public static void create(final String outDir) throws IOException, TransformerException {
+        HtmlCreator htmlCreator = new HtmlCreator(outDir);
+        htmlCreator.create();
     }
 
     public void create() throws TransformerException, IOException {

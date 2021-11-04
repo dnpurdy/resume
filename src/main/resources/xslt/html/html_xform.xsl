@@ -40,15 +40,15 @@
         <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
         <html lang="en">
             <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-114212979-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+                <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-L2FL2HZ26K"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
 
-  gtag('config', 'UA-114212979-1');
-</script>
+                    gtag('config', 'G-L2FL2HZ26K');
+                </script>
 
                 <meta charset="UTF-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>

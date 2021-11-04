@@ -23,16 +23,36 @@ public class FopCreator {
         this.outDir = outDir;
     }
 
+    public static void createPdf(final String outDir) throws IOException, FOPException, TransformerException {
+        FopCreator fopCreator = new FopCreator(outDir);
+        fopCreator.createPdf();
+    }
+
     public void createPdf() throws IOException, FOPException, TransformerException {
         create(fopResult(MimeConstants.MIME_PDF, genOutputputStream(".pdf")));
+    }
+
+    public static void createTxt(final String outDir) throws FOPException, IOException, TransformerException {
+        FopCreator fopCreator = new FopCreator(outDir);
+        fopCreator.createTxt();
     }
 
     public void createTxt() throws IOException, FOPException, TransformerException {
         create(fopResult(MimeConstants.MIME_PLAIN_TEXT, genOutputputStream(".txt")));
     }
 
+    public static void createRtf(final String outDir) throws IOException, FOPException, TransformerException {
+        FopCreator fopCreator = new FopCreator(outDir);
+        fopCreator.createRtf();
+    }
+
     public void createRtf() throws IOException, FOPException, TransformerException {
         create(fopResult(MimeConstants.MIME_RTF, genOutputputStream(".rtf")));
+    }
+
+    public static void createFo(final String outDir) throws IOException, TransformerException {
+        FopCreator fopCreator = new FopCreator(outDir);
+        fopCreator.createFo();
     }
 
     public void createFo() throws IOException, TransformerException {
