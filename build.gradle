@@ -1,5 +1,6 @@
 plugins {
     id "java"
+    id 'application'
     id "com.github.ben-manes.versions" version "0.39.0"
 }
 
@@ -21,15 +22,10 @@ dependencies {
     implementation 'org.apache.xmlgraphics:fop:+'
 }
 
-jar {
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+application {
+    mainClass = 'com.purdynet.Application'
+}
 
-    manifest {
-        attributes 'Main-Class': 'com.purdynet.CreateEx'
-    }
-
-    from {
-        configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
-    }
-    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+run {
+    args = [ "-obuild/resumeOutput" ]
 }
