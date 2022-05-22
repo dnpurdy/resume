@@ -56,6 +56,7 @@
         </skillSet>
         <skillSet type="Database">
             <skill>RDBMS (MySQL/PostGres/Oracle)</skill>
+            <skill>GraphQL</skill>
             <skill>MongoDB</skill>
             <skill>BigQuery</skill>
         </skillSet>
@@ -65,12 +66,13 @@
         </skillSet>
         <skillSet type="Product Management">
             <skill>Atlassian Products (JIRA, Confluence)</skill>
-            <skill>NetSuite</skill>
             <skill>Mavenlink</skill>
+            <skill>Linear</skill>
+            <skill>Aha!</skill>
         </skillSet>
         <skillSet type="Version Control / CICD">
             <skill>Git</skill>
-            <skill>SVN</skill>
+            <skill>CircleCI</skill>
             <skill>Jenkins</skill>
             <skill>TeamCity</skill>
             <skill>Bamboo</skill>
@@ -79,12 +81,25 @@
     <experience>
         <jobs>
             <job>
-                <company name="Cantina Consulting" city="Boston" state="Massachusetts" web="http://www.cantina.co"/>
+                <company name="Gastrograph AI" city="New York City" state="New York" web="https://www.gastrograph.com/"/>
                 <positions>
                     <position>
-                        <title>VP Engineering</title>
+                        <title>VP of Engineering</title>
+                        <dates>
+                            <start>2022-04-25</start>
+                        </dates>
+                        <accomplishments/>
+                    </position>
+                </positions>
+            </job>
+            <job>
+                <company name="Cantina Consulting" city="Boston" state="Massachusetts" web="https://cantina.co/"/>
+                <positions>
+                    <position>
+                        <title>VP of Engineering</title>
                         <dates>
                             <start>2021-02-01</start>
+			                <end>2022-03-04</end>
                         </dates>
                         <accomplishments>
                             <item>Worked collaboratively with the C-Suite to help define the company’s overall strategic direction and create the long term roadmap for technology</item>
