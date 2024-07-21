@@ -28,8 +28,8 @@
         to turn the next big ideas into technological realities.</highlights>
     <skills>
         <skillSet type="Languages">
-            <skill>Java</skill>
             <skill>JavasScript/TypeScript</skill>
+            <skill>Java</skill>
             <skill>Scala</skill>
         </skillSet>
         <skillSet type="Containerization">
@@ -84,11 +84,29 @@
                 <company name="Gastrograph AI" city="New York City" state="New York" web="https://www.gastrograph.com/"/>
                 <positions>
                     <position>
+                        <title>CEO</title>
+                        <dates>
+                            <start>2023-01-06</start>
+                        </dates>
+                        <accomplishments>
+                            <item>Improved YoY growth to 36% compared to previous flat growth; turnaround to profitable quarters after multi-million dollar losses</item>
+                            <item>Engaged with investors and key staff to bring company into acquisition-ready state across technology, legal, finance, and operations</item>
+                            <item>Re-organized staff and working processes to streamline business functions across worldwide located teams</item>
+                            <item>Navigated bank failure (SVB) and improved company cash and treasury operations ensuring critical financial security</item>
+                        </accomplishments>
+                    </position>
+                    <position>
                         <title>VP of Engineering</title>
                         <dates>
                             <start>2022-04-25</start>
+                            <end>2023-01-05</end>
                         </dates>
-                        <accomplishments/>
+                        <accomplishments>
+                            <item>Guided and delivered the first SaaS platform for the business after stagnant development, fully automating a manual AI pipeline</item>
+                            <item>Coordinated and organized the engineering, product, and data science groups together to deliver next-generation product on schedule</item>
+                            <item>Audited and improved technology cost for an 85% reduction in cloud spend, freeing capital for new feature development</item>
+                            <item>Implemented best practices for agile development, customer product feedback, and technology infrastructure uses</item>
+                        </accomplishments>
                     </position>
                 </positions>
             </job>
@@ -99,7 +117,7 @@
                         <title>VP of Engineering</title>
                         <dates>
                             <start>2021-02-01</start>
-			                <end>2022-03-04</end>
+                            <end>2022-03-04</end>
                         </dates>
                         <accomplishments>
                             <item>Worked collaboratively with the C-Suite to help define the company’s overall strategic direction and create the long term roadmap for technology</item>

@@ -302,10 +302,9 @@
                             </fo:block>
                         </fo:table-cell>
                         <fo:table-cell xsl:use-attribute-sets="detailText" wrap-option="wrap" padding="{$littlePadding}">
-                            <fo:block text-align="right"><xsl:value-of select="contact/address/street"/></fo:block>
                             <fo:block text-align="right"><xsl:value-of select="contact/address/city"/>, <xsl:value-of select="contact/address/state"/><xsl:text>&#160;</xsl:text><xsl:value-of select="contact/address/zip"/></fo:block>
-                            <fo:block text-align="right"><xsl:value-of select="contact/phone"/></fo:block>
                             <fo:block text-align="right"><xsl:value-of select="contact/email"/></fo:block>
+                            <fo:block text-align="right"><xsl:value-of select="contact/phone"/></fo:block>
                         </fo:table-cell>
                     </fo:table-row>
                 </fo:table-body>
@@ -476,14 +475,3 @@
         </fo:block>
     </xsl:template>
 </xsl:stylesheet>
-
-
-
-
-
-
-
-
-
-
-
