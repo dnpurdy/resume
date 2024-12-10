@@ -254,7 +254,7 @@
     <xsl:template match="/resume">
         <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
             <fo:layout-master-set>
-                <fo:simple-page-master master-name="allpages" page-height="11in" page-width="8.5in" margin-top=".6in" margin-bottom=".6in" margin-left=".5in" margin-right=".5in">
+                <fo:simple-page-master master-name="allpages" page-height="11in" page-width="8.5in" margin-top=".6in" margin-bottom=".6in" margin-left=".6in" margin-right=".6in">
                     <fo:region-body/>
                 </fo:simple-page-master>
             </fo:layout-master-set>
@@ -374,25 +374,48 @@
             <fo:block xsl:use-attribute-sets="sectionHeader"><xsl:text>PROFESSIONAL EXPERIENCE</xsl:text></fo:block>
             <xsl:for-each select="$jobs/job">
                 <fo:block xsl:use-attribute-sets="jobSpaceAfter">
-                    <fo:block xsl:use-attribute-sets="detailBoldText">
+                    <fo:block xsl:use-attribute-sets="detailBoldText" text-align-last="justify">
+                        <xsl:choose>
+                            <xsl:when test="company/@web != '' ">
+                                <fo:basic-link external-destination="url({company/@web})" color="blue">
+                                    <fo:inline><xsl:value-of select="company/@name"/></fo:inline>
+                                </fo:basic-link>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <fo:inline><xsl:value-of select="company/@name"/></fo:inline>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:text>, </xsl:text>
+                        <xsl:value-of select="company/@city"/>
+                        <xsl:text>, </xsl:text>
+                        <xsl:value-of select="company/@state"/>
+                        <xsl:if test="company/@acquired != ''">
+                            <fo:inline white-space="pre" font-style="italic">
+                                <xsl:text>  (Acquired: </xsl:text>
+                                <xsl:value-of select="company/@acquired"/>
+                                <xsl:text>)</xsl:text>
+                            </fo:inline>
+                        </xsl:if>           
+                        <fo:leader leader-pattern="space"/>
+                        <fo:inline xsl:use-attribute-sets="detailItalicText">
+                            <xsl:value-of select="format-date((positions/position/dates/start)[last()], '[MNn,3-3] [Y0001]')"/>
+                            <xsl:text> - </xsl:text>
                             <xsl:choose>
-                                <xsl:when test="company/@web != '' ">
-                                    <fo:basic-link external-destination="url({company/@web})" color="blue">
-                                        <fo:inline><xsl:value-of select="company/@name"/></fo:inline>
-                                    </fo:basic-link>
+                                <xsl:when test="string-length((positions/position/dates/end)[1]) = 10">
+                                    <xsl:value-of select="format-date((positions/position/dates/end)[1], '[MNn,3-3] [Y0001]')"/>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <fo:inline><xsl:value-of select="company/@name"/></fo:inline>
+                                    <xsl:text>Present</xsl:text>
                                 </xsl:otherwise>
-                            </xsl:choose>, <xsl:value-of select="company/@city"/>, <xsl:value-of select="company/@state"/>
-                        <xsl:if test="company/@acquired != ''"><fo:inline white-space="pre" font-style="italic">     (Acquired: <xsl:value-of select="company/@acquired"/>)</fo:inline></xsl:if>
-                            </fo:block>
+                            </xsl:choose>
+                        </fo:inline>
+                    </fo:block>
                     <xsl:for-each select="positions/position">
                         <xsl:sort select="format-date(dates/start, '[Y0001][MNn,3-3]')" order="descending"/>
-                        <fo:block text-align-last="justify">
-                            <fo:inline xsl:use-attribute-sets="detailItalicText"><xsl:value-of select="title"/></fo:inline>
-                            <fo:leader leader-pattern="space"/>
-                            <fo:inline xsl:use-attribute-sets="detailText">
+                        <fo:block>
+                            <fo:inline xsl:use-attribute-sets="detailItalicText">
+                                <xsl:value-of select="title"/>
+                                <xsl:text>, </xsl:text>
                                 <xsl:value-of select="format-date(dates/start, '[MNn,3-3] [Y0001]')"/>
                                 <xsl:text> - </xsl:text>
                                 <xsl:choose>
@@ -405,7 +428,8 @@
                                 </xsl:choose>
                             </fo:inline>
                         </fo:block>
-                        <xsl:if test="accomplishments/item">
+                    </xsl:for-each>
+                    <xsl:if test="accomplishments/item">
                         <fo:list-block>
                             <xsl:for-each select="accomplishments/item">
                                 <fo:list-item margin-left="12px">
@@ -419,7 +443,6 @@
                             </xsl:for-each>
                         </fo:list-block>
                         </xsl:if>
-                    </xsl:for-each>
                 </fo:block>
             </xsl:for-each>
         </fo:block>

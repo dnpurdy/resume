@@ -85,12 +85,6 @@
                             <start>2023-01-06</start>
                             <end>2024-08-02</end>
                         </dates>
-                        <accomplishments>
-                            <item>Achieved a 36% year-over-year growth by implementing strategic initiatives, resulting in a turnaround to profitable quarters after experiencing multi-million dollar losses</item>
-                            <item>Prepared the company for acquisition by aligning technology, legal, finance, and operations through proactive engagement with investors and key staff.</item>
-                            <item>Streamlined business functions across globally located teams, resulting in a 20% increase in operational efficiency by reorganizing staff and improving working processes.</item>
-                            <item>Improved company cash and treasury operations, ensuring critical financial security during a bank failure by navigating challenges and implementing strategic financial practices.</item>
-                        </accomplishments>
                     </position>
                     <position>
                         <title>VP of Engineering</title>
@@ -98,14 +92,16 @@
                             <start>2022-04-25</start>
                             <end>2023-01-05</end>
                         </dates>
-                        <accomplishments>
-                            <item>Guided and delivered the first SaaS platform for the business after stagnant development, fully automating a manual AI pipeline</item>
-                            <item>Coordinated and organized the engineering, product, and data science groups together to deliver next-generation product on schedule</item>
-                            <item>Audited and improved technology cost for an 85% reduction in cloud spend, freeing capital for new feature development</item>
-                            <item>Implemented best practices for agile development, customer product feedback, and technology infrastructure uses</item>
-                        </accomplishments>
                     </position>
                 </positions>
+                <accomplishments>
+                    <item>Achieved a 36% year-over-year growth by implementing strategic initiatives, transforming the company from multi-million dollar losses to profitable quarters</item>
+                    <item>Prepared the company for acquisition by proactively aligning technology, legal, finance, and operations across global teams, resulting in a 20% increase in operational efficiency</item>
+                    <item>Guided the development and delivery of the company's first SaaS platform, fully automating a manual AI pipeline and coordinating efforts across engineering, product, and data science groups</item>
+                    <item>Audited and drastically improved technology infrastructure, reducing cloud spend by 85% and freeing capital for new feature development</item>
+                    <item>Implemented comprehensive best practices for agile development, customer product feedback, and technology infrastructure to enhance overall organizational performance</item>
+                    <item>Navigated critical financial challenges during a bank failure by implementing strategic financial practices and ensuring robust cash and treasury operations</item>
+                </accomplishments>
             </job>
             <job>
                 <company name="Cantina Consulting" city="Boston" state="Massachusetts" web="https://cantina.co/"/>
@@ -116,13 +112,6 @@
                             <start>2021-02-01</start>
                             <end>2022-03-04</end>
                         </dates>
-                        <accomplishments>
-                            <item>Worked collaboratively with the C-Suite to help define the company’s overall strategic direction and create the long term roadmap for technology</item>
-                            <item>Drove the execution of technology roadmap within the confines of time, resources and market needs</item>
-                            <item>Researched, implemented, and developed advanced technologies to meet future product technology requirements</item>
-                            <item>Supervised recruitment, training, retention, and organization of all Engineering staff in accordance with the company policies and budget requirements</item>
-                            <item>Set the direction for the management processes for the technical aspects of company’s client work</item>
-                        </accomplishments>
                     </position>
                     <position>
                         <title>Managing Principal Engineer</title>
@@ -130,47 +119,42 @@
                             <start>2018-07-16</start>
                             <end>2021-01-31</end>
                         </dates>
-                        <accomplishments>
-                            <item>Developed strategic plans and technical expertise for ideation, development, and deployment of all client products and projects</item>
-                            <item>Ensured technology standards and best practices while maintaining compliance with appropriate requirements, laws, and regulations (HIPAA, FCRA, et al)</item>
-                            <item>Managed both senior and junior level direct reports, including utilization, mentorship, performance review, and individual career development</item>
-                            <item>Collaborated with Sales and Innovation teams to grow client pipeline, revenue, and client relationships through direct efforts and industry conference</item>
-                            <item>Worked consistently to transform organizations toward modern SDLC models, updated infrastructure solutions and processes out of legacy technical debt</item>
-                        </accomplishments>
                     </position>
                 </positions>
+                <accomplishments>
+                    <item>Worked collaboratively with the C-Suite to define the company's long-term technology roadmap, driving strategic direction and execution within time, resource, and market constraints</item>
+                    <item>Developed comprehensive strategic plans for client product ideation, development, and deployment, while ensuring compliance with industry regulations and technology standards (HIPAA, FCRA, et al)</item>
+                    <item>Supervised and managed engineering staff across senior and junior levels, focusing on recruitment, training, retention, mentorship, and individual career development</item>
+                    <item>Collaborated closely with Sales and Innovation teams to grow client pipeline, revenue, and relationships through direct efforts and industry conference participation</item>
+                    <item>Consistently transformed organizational technology infrastructure by modernizing SDLC models and updating processes to eliminate legacy technical debt</item>
+                    <item>Researched, implemented, and developed advanced technologies to meet future product requirements and maintain competitive technological capabilities</item>
+                </accomplishments>
             </job>
             <job>
                 <company name="SwiftIQ" city="Chicago" state="Illinois" web="http://www.swiftiq.com/" acquired="Jan 2020"/>
                 <positions>
-                    <position>
-                        <title>Lead Platform Engineer</title>
-                        <dates>
-                            <start>2015-03-01</start>
-                            <end>2016-12-31</end>
-                        </dates>
-                        <accomplishments>
-                            <item>Developed streamlined BigData/Massive Parallel pipelines for ingesting $50 billion of POS retail transactions annually, automating full receipt level data for top retailers, brands and suppliers</item>
-                            <item>Conceived, designed, developed, and iterated multiple core platform applications, helping turn a pilot-only startup into a seven figure recurrent revenue business</item>
-                            <item>Designed and implemented a industry leading Out-of-Stock inventory solution driven solely from POS transactions</item>
-                            <item>Principal developer for propriety IP allowing for one-to-one mobile advertising to targeted mobile devices using physical offline POS transactions alone. Patent Pending</item>
-                        </accomplishments>
-                    </position>
                     <position>
                         <title>Senior Engineering Manager</title>
                         <dates>
                             <start>2017-01-01</start>
                             <end>2017-08-18</end>
                         </dates>
-                        <accomplishments>
-                            <item>Directly managed a startup team of 8 engineers and co-founders, split between local and remote locations</item>
-                            <item>Facilitated release planning, sprint planning, retrospective meetings, and work detail specifications</item>
-                            <item>Removed team impediments on a daily basis to allow the team to deliver the sprint goals and deliverables</item>
-                            <item>Collaborated with members of the Product, Marketing, Business, and Engineering Teams to develop and maintain product pipeline on strict money and time budgets</item>
-                            <item>Concurrently continued strategic, high-level development responsibilities from platform engineer position while engaging new managerial responsibilities</item>
-                        </accomplishments>
+                    </position>
+                    <position>
+                        <title>Lead Platform Engineer</title>
+                        <dates>
+                            <start>2015-03-01</start>
+                            <end>2016-12-31</end>
+                        </dates>
                     </position>
                 </positions>
+                <accomplishments>
+                    <item>Developed groundbreaking BigData/Massive Parallel pipelines for ingesting $50 billion of POS retail transactions annually, transforming a pilot-only startup into a seven-figure recurring revenue business</item>
+                    <item>Designed and implemented innovative solutions, including an industry-leading Out-of-Stock inventory solution and proprietary mobile advertising IP using offline POS transactions (Patent Pending)</item>
+                    <item>Directly managed a diverse startup team of 8 engineers and co-founders across local and remote locations, facilitating agile planning, sprint execution, and removing daily team impediments</item>
+                    <item>Collaborated cross-functionally with Product, Marketing, Business, and Engineering teams to develop and maintain product pipelines within strict budget and time constraints</item>
+                    <item>Demonstrated versatility by concurrently managing strategic, high-level development responsibilities while taking on new managerial roles and maintaining technical excellence</item>
+                </accomplishments>
             </job>
             <job>
                 <company name="Firm58" city="Chicago" state="Illinois" web="http://www.firm58.com" acquired="Apr 2018"/>
@@ -181,19 +165,6 @@
                             <start>2011-03-01</start>
                             <end>2015-03-01</end>
                         </dates>
-                        <accomplishments>
-                            <item>Designed, implemented, and deployed a enterprise wide conversion from licensed, proprietary
-                                container technology to free, open-source alternatives saving significant resources and improving
-                                operational efficiency and reliability</item>
-                            <item>Produced a high performance, massively parallelizable compliance and surveillance engine for
-                                identifying problematic trading patterns within customer data; took the product through its full life-cycle
-                                from ideation, through development, and into market delivery</item>
-                            <item>Collaborated with operational staff to personally support data center operations including hardware
-                                replacement and maintenance, physical IT resource allocation/planning, and disaster recovery needs</item>
-                            <item>Worked directly with offshore development teams to distribute easily delegated responsibilities
-                                while maintaining managerial review of the quality of the work product, reducing costs and allowing
-                                for faster parallel integrations</item>
-                        </accomplishments>
                     </position>
                     <position>
                         <title>Deployment/Integration Engineer</title>
@@ -201,17 +172,15 @@
                             <start>2009-07-01</start>
                             <end>2011-03-01</end>
                         </dates>
-                        <accomplishments>
-                            <item>Individually developed custom transactional loading software to streamline Firm58's critical, core
-                                ETL layer, replacing complicated and outdated infrastructure with a simplified, modern alternative</item>
-                            <item>Leveraged a variety of open source, proprietary, and custom technologies to extract, transform, and
-                                load data from nearly 75 data vendors and 100 million daily contracted transactions into a single normalized data model</item>
-                            <item>Authored complex and business critical queries and reports to provide clear, straight-forward
-                                analytical insight of client trading data, costs, and trends, as well as in-house system performance
-                                metrics</item>
-                        </accomplishments>
                     </position>
                 </positions>
+                <accomplishments>
+                    <item>Spearheaded enterprise-wide technology transformation by converting from licensed proprietary container technology to open-source alternatives, significantly reducing resources while improving operational efficiency and system reliability</item>
+                    <item>Developed a high-performance, massively parallelizable compliance and surveillance engine for identifying problematic trading patterns, taking the product from ideation through full market delivery</item>
+                    <item>Created custom transactional loading software and leveraged diverse technologies to extract, transform, and load data from 75+ vendors and 100 million daily transactions into a single normalized data model</item>
+                    <item>Collaborated extensively with operational staff and offshore development teams to support data center operations, including hardware maintenance, IT resource planning, and quality management while reducing overall costs</item>
+                    <item>Authored complex, business-critical queries and reports that provided clear analytical insights into client trading data, costs, trends, and in-house system performance metrics</item>
+                </accomplishments>
             </job>
             <job>
                 <company name="JWiley Photography" city="Chicago" state="Illinois" web="http://www.jwileyphotography.com"/>
@@ -222,14 +191,14 @@
                             <start>2008-05-01</start>
                             <end>2008-10-01</end>
                         </dates>
-                        <accomplishments>
-                            <item>Developed the initial web presence and online advertising infrastructure for a fledging media oriented artist</item>
-                            <item>Main point person for strategic and business planning decisions for a growing small business</item>
-                            <item>Provided and configured free Linux servers and work-flow solutions to maximize limited resources</item>
-                            <item>Set up and maintained an Apache web presence, Postfix mail servers, fail-safe redundant RAID file and cloud backup solutions, as well as automated BASH scripts for seamless digital product management</item>
-                        </accomplishments>
                     </position>
                 </positions>
+                <accomplishments>
+                    <item>Developed the initial web presence and online advertising infrastructure for a fledging media oriented artist</item>
+                    <item>Main point person for strategic and business planning decisions for a growing small business</item>
+                    <item>Provided and configured free Linux servers and work-flow solutions to maximize limited resources</item>
+                    <item>Set up and maintained an Apache web presence, Postfix mail servers, fail-safe redundant RAID file and cloud backup solutions, as well as automated BASH scripts for seamless digital product management</item>
+                </accomplishments>
             </job>
             <job>
                 <company name="Citadel Investment Group" city="Chicago" state="Illinois" web="https://www.citadel.com/"/>
@@ -240,14 +209,15 @@
                             <start>2005-03-01</start>
                             <end>2007-09-01</end>
                         </dates>
-                        <accomplishments>
-                            <item>Provided critical back-office and operational support for all styles of over-the-counter swaps (credit, equity, futures, and interest rate derivatives) for $19B hedge fund</item>
-                            <item>Intense focus on process optimization, including automation of tasks and transition to high performance back-end solutions</item>
-                            <item>Worked with trading, development, operations, and accounting staff to develop, implement, and improve technology solutions across company systems</item>
-                            <item>Coordinated the study, modeling, and tracking of company-wide capacity metrics to ensure necessary staffing levels</item>
-                        </accomplishments>
+
                     </position>
                 </positions>
+                <accomplishments>
+                    <item>Provided critical back-office and operational support for all styles of over-the-counter swaps (credit, equity, futures, and interest rate derivatives) for $19B hedge fund</item>
+                    <item>Intense focus on process optimization, including automation of tasks and transition to high performance back-end solutions</item>
+                    <item>Worked with trading, development, operations, and accounting staff to develop, implement, and improve technology solutions across company systems</item>
+                    <item>Coordinated the study, modeling, and tracking of company-wide capacity metrics to ensure necessary staffing levels</item>
+                </accomplishments>
             </job>
         </jobs>
     </experience>

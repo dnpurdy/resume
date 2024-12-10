@@ -35,15 +35,16 @@
                                     </xsl:choose>
                                 </strong>
                             </div>
-                            <div xsl:use-attribute-sets="wideDetails">
-                                <ul>
-                                    <xsl:for-each select="accomplishments/item">
-                                        <li><xsl:value-of select="."/></li>
-                                    </xsl:for-each>
-                                </ul>
-                            </div>
+
                         </div>
                     </xsl:for-each>
+                    <div xsl:use-attribute-sets="wideDetails">
+                        <ul>
+                            <xsl:for-each select="accomplishments/item">
+                                <li><xsl:value-of select="."/></li>                                    
+                            </xsl:for-each>
+                        </ul>
+                    </div>
                 </xsl:for-each>
             </section>
         </xsl:for-each>
