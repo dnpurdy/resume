@@ -10,6 +10,7 @@
 # gradle
 .gradle/
 build/
+bin/
 out/
 
 # sbt specific
