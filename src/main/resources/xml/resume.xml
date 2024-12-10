@@ -14,13 +14,14 @@
         <github>https://github.com/dnpurdy</github>
         <linkedin>https://linkedin.com/in/david-purdy</linkedin>
     </contact>
-    <highlights>Creative, results driven technology leader with 20 years of experience in strategy, management, design,
-        development, and testing. Problem-solver with a passion for innovative solutions,
-        rigorous systems thinking, and solving complex problems driven by market need. Skilled in grasping
-        the big picture, leveraging existing solutions to enable next-step endeavors into new spaces that
-        are sustainable, agile, and resource efficient. Focused on conceptualizing, developing, and
-        implementing solutions while partnering closely with key stakeholders
-        to turn the next big ideas into technological realities.</highlights>
+    <highlights>
+        Creative, results-driven technology leader with 20 years of experience in strategy, management, design, 
+        development, and testing. Problem-solver passionate about innovative solutions, rigorous systems thinking, and 
+        solving complex problems driven by market need. Skilled in grasping the big picture and leveraging existing solutions 
+        to enable next-step endeavors into new spaces that are sustainable, agile, and resource-efficient. Focused on 
+        conceptualizing, developing, and implementing solutions while partnering closely with key stakeholders to turn 
+        big ideas into technological realities.
+    </highlights>
     <skills>
         <skillSet type="Languages">
             <skill>JavaScript/TypeScript</skill>
