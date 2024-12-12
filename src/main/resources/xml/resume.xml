@@ -182,7 +182,7 @@
                     <item>Authored complex, business-critical queries and reports that provided clear analytical insights into client trading data, costs, trends, and in-house system performance metrics</item>
                 </accomplishments>
             </job>
-            <job>
+            <job hidden="true">
                 <company name="JWiley Photography" city="Chicago" state="Illinois" web="http://www.jwileyphotography.com"/>
                 <positions>
                     <position>
