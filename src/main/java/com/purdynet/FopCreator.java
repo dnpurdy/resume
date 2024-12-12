@@ -75,6 +75,7 @@ public class FopCreator {
     private void transform(final Result res) throws TransformerException {
         StreamSource src = createSource(xmlSourceFilename);
         Transformer transformer = createTransformer(xslSourceFilename);
+        transformer.setParameter("showTechnicalSkills", false);
         transformer.transform(src, res);
     }
 
