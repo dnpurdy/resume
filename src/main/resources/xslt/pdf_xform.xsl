@@ -7,6 +7,8 @@
                 xmlns:pn="http://www.purdynet.com"
                 exclude-result-prefixes="java pn Firm58">
 
+    <xsl:param name="showTechnicalSkills" select="true"/>
+
     <!-- FORMATTING -->
     <xsl:variable name="dollarAmountFormatString" select="string('$###,##0.00;($###,##0.00)')" />
     <xsl:variable name="rateFormatString" select="string('###,##0.0000;(###,##0.0000)')" />
@@ -15,14 +17,17 @@
         <xsl:text>&#x00a0;</xsl:text>
     </xsl:variable>
 
-    <xsl:variable name="littlePadding" select="'1pt'" />
-    <xsl:variable name="borderBasic" select="'.5pt solid black'" />
+
     <xsl:variable name="mainFont">
-        <xsl:text>Times</xsl:text>
+        <xsl:text>Times New Roman</xsl:text>
     </xsl:variable>
     <xsl:variable name="smallFontSize">
-        <xsl:text>8</xsl:text>
+        <xsl:text>10</xsl:text>
     </xsl:variable>
+
+    <xsl:variable name="littlePadding" select="'1pt'" />
+    <xsl:variable name="smallPadding" select="$smallFontSize" />
+    <xsl:variable name="borderBasic" select="'.5pt solid black'" />
 
     <xsl:attribute-set name="nameBanner">
         <xsl:attribute name="font-family">
@@ -30,12 +35,13 @@
         </xsl:attribute>
         <xsl:attribute name="color">black</xsl:attribute>
         <xsl:attribute name="font-weight">bold</xsl:attribute>
-        <xsl:attribute name="font-size"><xsl:value-of select="floor($smallFontSize*3)" />pt</xsl:attribute>
+        <xsl:attribute name="font-size"><xsl:value-of select="floor($smallFontSize*2.5)" />pt</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="sectionHeader">
         <xsl:attribute name="font-family">
             <xsl:value-of select="$mainFont" />
         </xsl:attribute>
+        <xsl:attribute name="border-bottom">.5pt solid black</xsl:attribute>
         <xsl:attribute name="color">black</xsl:attribute>
         <xsl:attribute name="font-weight">normal</xsl:attribute>
         <xsl:attribute name="font-size"><xsl:value-of select="floor($smallFontSize*1.5)" />pt</xsl:attribute>
@@ -254,7 +260,7 @@
     <xsl:template match="/resume">
         <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
             <fo:layout-master-set>
-                <fo:simple-page-master master-name="allpages" page-height="11in" page-width="8.5in" margin-top=".6in" margin-bottom=".6in" margin-left=".6in" margin-right=".6in">
+                <fo:simple-page-master master-name="allpages" page-height="11in" page-width="8.5in" margin-top=".8in" margin-bottom=".8in" margin-left=".8in" margin-right=".8in">
                     <fo:region-body/>
                 </fo:simple-page-master>
             </fo:layout-master-set>
@@ -265,10 +271,6 @@
 
                     <xsl:call-template name="highlights">
                         <xsl:with-param name="highlights" select="highlights"/>
-                    </xsl:call-template>
-
-                    <xsl:call-template name="skills">
-                        <xsl:with-param name="skills" select="skills"/>
                     </xsl:call-template>
 
                     <xsl:call-template name="experience">
@@ -283,6 +285,22 @@
                         <xsl:with-param name="degree" select="education/degree"/>
                     </xsl:call-template>
 
+                    <xsl:choose>
+                        <xsl:when test="$showTechnicalSkills">
+                            <xsl:call-template name="skills">
+                                <xsl:with-param name="skills" select="skills"/>
+                            </xsl:call-template>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <fo:block text-align="center" xsl:use-attribute-sets="detailText">
+                                <xsl:text>Details on specific technical skills available at </xsl:text>
+                                <fo:basic-link external-destination="url('https://resume.davidpurdy.net')" color="blue">
+                                    <fo:inline>resume.davidpurdy.net</fo:inline>
+                                </fo:basic-link>
+                            </fo:block>
+                        </xsl:otherwise>
+                    </xsl:choose>
+
                     <fo:block id="lastPage" />
                 </fo:flow>
             </fo:page-sequence>
@@ -292,7 +310,7 @@
     <xsl:template name="header">
         <fo:block>
             <fo:table table-layout="fixed" width="100%">
-                <fo:table-column column-width="proportional-column-width(2)" />
+                <fo:table-column column-width="proportional-column-width(1)" />
                 <fo:table-column column-width="proportional-column-width(1)" />
                 <fo:table-body>
                     <fo:table-row>
@@ -302,9 +320,22 @@
                             </fo:block>
                         </fo:table-cell>
                         <fo:table-cell xsl:use-attribute-sets="detailText" wrap-option="wrap" padding="{$littlePadding}">
-                            <fo:block text-align="right"><xsl:value-of select="contact/location"/></fo:block>
-                            <fo:block text-align="right"><xsl:value-of select="contact/email"/></fo:block>
-                            <fo:block text-align="right"><xsl:value-of select="contact/phone"/></fo:block>
+                            <fo:block text-align="right">
+                                <fo:basic-link external-destination="url({contact/linkedin})" color="black">
+                                    <fo:inline><xsl:value-of select="substring-after(contact/linkedin, 'https://')" /></fo:inline>
+                                </fo:basic-link>
+                                <xsl:text>&#160;&#8226;&#160;</xsl:text>
+                                <xsl:value-of select="contact/location"/>
+                            </fo:block>
+                            <fo:block text-align="right">
+                                <fo:basic-link external-destination="url({concat('tel:', contact/phone)})" color="black">
+                                    <fo:inline><xsl:value-of select="contact/phone" /></fo:inline>
+                                </fo:basic-link>
+                                <xsl:text>&#160;&#8226;&#160;</xsl:text>
+                                <fo:basic-link external-destination="url({concat('mailto:', contact/linkedin)})" color="black">
+                                    <fo:inline><xsl:value-of select="contact/email" /></fo:inline>
+                                </fo:basic-link>
+                            </fo:block>
                         </fo:table-cell>
                     </fo:table-row>
                 </fo:table-body>
@@ -324,10 +355,14 @@
     <xsl:template name="highlights">
         <xsl:param name="highlights"/>
         <fo:block xsl:use-attribute-sets="section">
+            <!--
             <fo:block xsl:use-attribute-sets="sectionHeader"><xsl:text>QUALIFICATION HIGHLIGHTS</xsl:text></fo:block>
-            <fo:block xsl:use-attribute-sets="detailText">
-                <xsl:value-of select="$highlights"/>
-            </fo:block>
+            -->
+            <fo:block-container text-align="justify">
+                <fo:block margin-top="20" margin-bottom="20" xsl:use-attribute-sets="detailText">
+                    <xsl:value-of select="$highlights"/>
+                </fo:block>
+            </fo:block-container>
         </fo:block>
     </xsl:template>
 
@@ -372,7 +407,7 @@
         <xsl:param name="jobs"/>
         <fo:block xsl:use-attribute-sets="section">
             <fo:block xsl:use-attribute-sets="sectionHeader"><xsl:text>PROFESSIONAL EXPERIENCE</xsl:text></fo:block>
-            <xsl:for-each select="$jobs/job">
+            <xsl:for-each select="$jobs/job[not(@hidden = 'true')]">
                 <fo:block xsl:use-attribute-sets="jobSpaceAfter">
                     <fo:block xsl:use-attribute-sets="detailBoldText" text-align-last="justify">
                         <xsl:choose>
