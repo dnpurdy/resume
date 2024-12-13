@@ -54,6 +54,14 @@
         <xsl:attribute name="color">black</xsl:attribute>
         <xsl:attribute name="margin-bottom"><xsl:value-of select="floor($smallFontSize*1.5)" />pt</xsl:attribute>
     </xsl:attribute-set>
+    <xsl:attribute-set name="companyText">
+        <xsl:attribute name="font-family">
+            <xsl:value-of select="$mainFont" />
+        </xsl:attribute>
+        <xsl:attribute name="color">black</xsl:attribute>
+        <xsl:attribute name="font-weight">bold</xsl:attribute>
+        <xsl:attribute name="font-size"><xsl:value-of select="floor($smallFontSize*1.5)" />pt</xsl:attribute>
+    </xsl:attribute-set>
     <xsl:attribute-set name="detailText">
         <xsl:attribute name="font-family">
             <xsl:value-of select="$mainFont" />
@@ -408,8 +416,9 @@
         <fo:block xsl:use-attribute-sets="section">
             <fo:block xsl:use-attribute-sets="sectionHeader"><xsl:text>PROFESSIONAL EXPERIENCE</xsl:text></fo:block>
             <xsl:for-each select="$jobs/job[not(@hidden = 'true')]">
+                <fo:block-container keep-together.within-page="always">
                 <fo:block xsl:use-attribute-sets="jobSpaceAfter">
-                    <fo:block xsl:use-attribute-sets="detailBoldText" text-align-last="justify">
+                    <fo:block xsl:use-attribute-sets="companyText" font-size="14" text-align-last="justify">
                         <xsl:choose>
                             <xsl:when test="company/@web != '' ">
                                 <fo:basic-link external-destination="url({company/@web})" color="blue">
@@ -448,9 +457,12 @@
                     <xsl:for-each select="positions/position">
                         <xsl:sort select="format-date(dates/start, '[Y0001][MNn,3-3]')" order="descending"/>
                         <fo:block>
-                            <fo:inline xsl:use-attribute-sets="detailItalicText">
+                         
+                            <fo:inline xsl:use-attribute-sets="detailBoldText">
                                 <xsl:value-of select="title"/>
-                                <xsl:text>, </xsl:text>
+                                </fo:inline>
+                                   <fo:inline xsl:use-attribute-sets="detailItalicText">
+                                <xsl:text>&#160;&#160;-&#160;&#160;</xsl:text>
                                 <xsl:value-of select="format-date(dates/start, '[MNn,3-3] [Y0001]')"/>
                                 <xsl:text> - </xsl:text>
                                 <xsl:choose>
@@ -479,6 +491,7 @@
                         </fo:list-block>
                         </xsl:if>
                 </fo:block>
+                </fo:block-container>
             </xsl:for-each>
         </fo:block>
     </xsl:template>
@@ -503,8 +516,6 @@
                     </fo:block>
                     <fo:block xsl:use-attribute-sets="detailText">
                         <xsl:value-of select="title"/>
-                    </fo:block>
-                        <fo:block xsl:use-attribute-sets="detailText">
                         <xsl:if test="firstNamedInventor">&#160;(Co-Inventor <xsl:value-of select="firstNamedInventor"/>) </xsl:if>
                     </fo:block>
                 </fo:block>
